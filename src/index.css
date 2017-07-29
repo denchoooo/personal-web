@@ -1,31 +1,46 @@
 /* Global CSS Files, import global CSS Frameworks here   */
 
+@font-face {
+  font-family: 'PatuaOne-Regular';
+  src: local('Patua One Regular'),
+    url('./resources/fonts/Patua_One/PatuaOne-Regular.ttf') format(ttf);
+}
+
+@font-face {
+  font-family: 'MavenPro-Regular';
+  src: local('Maven Pro Regular'),
+    url('./resources/fonts/Maven_Pro/MavenPro-Regular.ttf') format(ttf);
+}
+
+:root {
+  --green: #07d3bc;
+  --red: #fd5872;
+  --black: #303030;
+  --white: #fcfafe;
+  --font-primary: 'PatuaOne-Regular', sans-serif;
+  --font-secondary: 'MavenPro-Regular', sans-serif;
+  --sizeh1: 6.854em;
+  --sizeh2: 4.236em;
+  --sizeh3: 2.618em;
+  --sizeh4: 1.618em;
+  --sizeh5: 1em;
+  --sizeh6: 0.618em;
+  --sizebody: 1.125em;
+  --sizecaption: 1em;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
 
 body {
   height: 100vh;
   position: relative;
-  background-color: #222;
+  background-color: var(--white);
 }
 
-#root {
-  position: relative;
-  height: 100%;
-}
-
-a {
-  color: lightblue;
-  opacity: 0.75;
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 1;
-  text-decoration: none;
-  cursor: pointer;
+.centered {
+  text-align: center;
 }

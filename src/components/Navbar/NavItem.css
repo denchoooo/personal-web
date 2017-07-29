@@ -1,0 +1,29 @@
+.nav-item {
+  display: block;
+  color: var(--red);
+  font-family: var(--font-primary);
+  font-size: 12px;
+  line-height: 15px;
+  flex: 1;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--red);
+}
+
+a:visited {
+  color: var(--red);
+}
+
+a:hover {
+  color: var(--green);
+}
+
+a:active {
+  color: var(--green);
+}
