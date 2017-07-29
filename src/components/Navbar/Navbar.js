@@ -12,20 +12,23 @@ class Navbar extends Component {
   render() {
     return (
       <div className="navbar">
-        <div className="navbar-logo">
-          <Logo size="small" />
+        <div className="navbar-left">
+          <div className="navbar-logo">
+            <Logo size="small" />
+          </div>
+          <div className="navmenu">
+            <nav>
+              <ul className="navitem-container">
+                <NavItem exact text="Home" linkTo="/" />
+                <NavItem text="About" linkTo="/about" />
+                <NavItem text="Works" linkTo="/works" />
+                <NavItem text="Contact" linkTo="/contact" />
+                <NavItem text="Blog" linkTo="/blog" />
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div>
-          <nav>
-            <ul className="navitem-container">
-              <NavItem exact text="HOME" linkTo="/" />
-              <NavItem text="ABOUT" linkTo="/about" />
-              <NavItem text="WORKS" linkTo="/works" />
-              <NavItem text="CONTACT" linkTo="/contact" />
-              <NavItem text="BLOG" linkTo="/blog" />
-            </ul>
-          </nav>
-        </div>
+        <div className="navbar-right">Right</div>
       </div>
     );
   }

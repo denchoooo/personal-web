@@ -9,3 +9,38 @@
 .navitem-container {
   display: flex;
 }
+
+@media only screen and (min-width: 961px) {
+  .navbar {
+    display: flex;
+  }
+
+  .navbar-left {
+    display: flex;
+    flex: 5;
+  }
+
+  .navbar-right {
+    flex: 2;
+  }
+
+  .navmenu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  .navmenu nav {
+    width: 100%;
+  }
+
+  .navbar-logo {
+    width: 140px;
+  }
+
+  .navitem-container {
+    width: 100%;
+    max-width: 685px;
+    justify-content: center;
+  }
+}

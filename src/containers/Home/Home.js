@@ -10,7 +10,7 @@ class Home extends Component {
         <div className="text-area">
           <h1 className="home-text heading4">
             Hello,<br />I'm <span className="text-primary">Deni</span>{' '}
-            <span className="text-secondary">Cho</span>
+            <span className="text-secondary">Cho</span>,
             <br />web developer.
           </h1>
           <div className="home-text-line" />
