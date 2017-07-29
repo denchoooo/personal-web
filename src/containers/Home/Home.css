@@ -1,5 +1,4 @@
 .container-home {
-  border: 1px solid red;
   flex: 1;
   display: flex;
   align-items: center;
@@ -10,17 +9,24 @@
   font-family: var(--font-primary);
   font-size: 38px;
   line-height: 46px;
-  letter-spacing: 1.3px;
 }
 
 .home-subtext {
   font-family: var(--font-secondary);
   font-size: 14px;
+  letter-spacing: 1.6px;
+  line-height: 27px;
 }
 
 .text-area {
   margin-left: 25px;
 }
 
-.hometext-line {
+.home-text-line {
+  display: block;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 290px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
