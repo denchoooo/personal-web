@@ -4,9 +4,3 @@
   margin-right: 10px;
   font-size: 22px;
 }
-
-@media only screen and (min-width: 961px) {
-  .social-icon {
-    visibility: hidden;
-  }
-}

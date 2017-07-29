@@ -7,3 +7,9 @@
 .socials-container-footer {
   display: flex;
 }
+
+@media only screen and (min-width: 961px) {
+  .socials-container-footer {
+    visibility: hidden;
+  }
+}

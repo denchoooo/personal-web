@@ -3,12 +3,9 @@ import './Navbar.css';
 
 import NavItem from './NavItem';
 import Logo from '../Logo/Logo';
+import SocialIcon from '../SocialIcon/SocialIcon';
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="navbar">
@@ -28,7 +25,22 @@ class Navbar extends Component {
             </nav>
           </div>
         </div>
-        <div className="navbar-right">Right</div>
+        <div className="navbar-right">
+          <div className="socials-container-navbar">
+            <SocialIcon
+              to="https://github.com/denichodev"
+              className="fa fa-github"
+            />
+            <SocialIcon
+              to="https://github.com/denichodev"
+              className="fa fa-linkedin"
+            />
+            <SocialIcon
+              to="https://twitter.com/denichodev"
+              className="fa fa-twitter"
+            />
+          </div>
+        </div>
       </div>
     );
   }

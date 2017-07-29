@@ -9,9 +9,9 @@ class Home extends Component {
         <img className="logo-big" src={logo} alt="Logo Big" />
         <div className="text-area">
           <h1 className="home-text heading4">
-            Hello,<br />I'm <span className="text-primary">Deni</span>{' '}
+            Hello,<br />I’m <span className="text-primary">Deni</span>{' '}
             <span className="text-secondary">Cho</span>,
-            <br />web developer.
+            <br />a web developer.
           </h1>
           <div className="home-text-line" />
           <h2 className="home-subtext">Front End Developer / Web Designer</h2>
