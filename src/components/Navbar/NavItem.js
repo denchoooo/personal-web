@@ -1,21 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './NavItem.css';
 
-const NavItem = ({ text, linkTo }) => {
+const NavItem = ({ text, linkTo, exact }) => {
   return (
     <li className="nav-item">
-      <Link to={linkTo}>
+      <NavLink
+        exact={exact}
+        to={linkTo}
+        activeStyle={{
+          color: 'var(--green)'
+        }}
+      >
         {text}
-      </Link>
+      </NavLink>
     </li>
   );
 };
 
 NavItem.propTypes = {
   text: PropTypes.string.isRequired,
-  linkTo: PropTypes.string.isRequired
+  linkTo: PropTypes.string.isRequired,
+  exact: PropTypes.bool
+};
+
+NavItem.defaultProps = {
+  exact: false
 };
 
 export default NavItem;

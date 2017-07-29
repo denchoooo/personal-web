@@ -7,8 +7,6 @@ import Logo from '../Logo/Logo';
 class Navbar extends Component {
   constructor(props) {
     super(props);
-
-    this.setState = {};
   }
 
   render() {
@@ -20,7 +18,7 @@ class Navbar extends Component {
         <div>
           <nav>
             <ul className="navitem-container">
-              <NavItem text="HOME" linkTo="/" />
+              <NavItem exact text="HOME" linkTo="/" />
               <NavItem text="ABOUT" linkTo="/about" />
               <NavItem text="WORKS" linkTo="/works" />
               <NavItem text="CONTACT" linkTo="/contact" />
