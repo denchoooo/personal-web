@@ -1,1 +1,26 @@
+.container-home {
+  border: 1px solid red;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
 
+.home-text {
+  color: var(--black);
+  font-family: var(--font-primary);
+  font-size: 38px;
+  line-height: 46px;
+  letter-spacing: 1.3px;
+}
+
+.home-subtext {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+}
+
+.text-area {
+  margin-left: 25px;
+}
+
+.hometext-line {
+}

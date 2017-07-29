@@ -1,0 +1,21 @@
+/* Primary  */
+@font-face {
+  font-family: 'PatuaOne-Regular';
+  src: local('Patua One Regular'),
+    url('./resources/fonts/Patua_One/PatuaOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'),
+    url('./resources/fonts/Raleway/Raleway-Thin.ttf') format('truetype');
+  font-style: normal;
+}
+
+/* Secondary  */
+
+@font-face {
+  font-family: 'MavenPro-Regular';
+  src: url('./resources/fonts/Maven_Pro/MavenPro-Regular.ttf')
+    format('truetype');
+}

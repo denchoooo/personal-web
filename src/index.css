@@ -1,16 +1,5 @@
 /* Global CSS Files, import global CSS Frameworks here   */
-
-@font-face {
-  font-family: 'PatuaOne-Regular';
-  src: local('Patua One Regular'),
-    url('./resources/fonts/Patua_One/PatuaOne-Regular.ttf') format(ttf);
-}
-
-@font-face {
-  font-family: 'MavenPro-Regular';
-  src: local('Maven Pro Regular'),
-    url('./resources/fonts/Maven_Pro/MavenPro-Regular.ttf') format(ttf);
-}
+@import 'fonts.css';
 
 :root {
   --green: #07d3bc;
@@ -18,7 +7,7 @@
   --black: #303030;
   --white: #fcfafe;
   --font-primary: 'PatuaOne-Regular', sans-serif;
-  --font-secondary: 'MavenPro-Regular', sans-serif;
+  --font-secondary: 'Raleway', sans-serif;
   --sizeh1: 6.854em;
   --sizeh2: 4.236em;
   --sizeh3: 2.618em;
@@ -41,6 +30,18 @@ body {
   background-color: var(--white);
 }
 
+#root {
+  height: 100vh;
+}
+
 .centered {
   text-align: center;
+}
+
+.text-primary {
+  color: var(--red);
+}
+
+.text-secondary {
+  color: var(--green);
 }
