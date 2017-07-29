@@ -30,3 +30,19 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+.logo-big {
+  display: none;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 960px) {
+  .container-home {
+    justify-content: center;
+  }
+
+  .logo-big {
+    display: block;
+    width: 40%;
+    margin-right: 50px;
+  }
+}

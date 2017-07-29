@@ -1,5 +1,6 @@
 /* Global CSS Files, import global CSS Frameworks here   */
-@import 'fonts.css';
+@import "fonts.css";
+@import "~font-awesome/css/font-awesome.min.css";
 
 :root {
   --green: #07d3bc;

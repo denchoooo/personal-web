@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 import logo from '../../resources/svgs/logo.svg';
 import './Logo.css';
 
-const Logo = size => {
-  const classNameSize = size === 'big' ? 'logo-big' : 'logo-small';
-
+const Logo = ({ size }) => {
   return (
     <Link to="/">
-      <img className={`${classNameSize}`} src={logo} alt="Logo" />
+      <img className={`logo-small`} src={logo} alt="Logo" />
     </Link>
   );
 };

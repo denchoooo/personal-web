@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar/Navbar';
 import './App.css';
 
 import Home from './Home/Home';
+import Footer from '../components/Footer/Footer';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <div className="app-wrapper">
           <Navbar />
           <Route exact path="/" component={Home} />
+          <Footer />
         </div>
       </Router>
     );
