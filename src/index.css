@@ -64,8 +64,14 @@ body {
   background-image: linear-gradient(-90deg, #fd5872 0%, #07d3bc 100%);
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 960px) {
   .content-wrapper {
     margin-bottom: 37px;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .content-wrapper {
+    margin-top: 71px;
   }
 }

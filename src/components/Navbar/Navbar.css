@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   height: 70px;
+  background-color: var(--white);
 }
 
 .navbar {
@@ -30,14 +31,14 @@
   padding-bottom: 10px;
 }
 
-.navmenu-sticky {
+.navmenu-sticky-mobile {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
 }
 
-.navline-sticky {
+.navline-sticky-mobile {
   position: fixed;
   top: 35px;
   left: 0;
@@ -105,5 +106,12 @@
 
   .navbar-line {
     margin: 0;
+  }
+
+  .top-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
   }
 }

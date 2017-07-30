@@ -18,16 +18,27 @@ class Navbar extends Component {
     }
 
     if (lastTopPixel > topLogoPixel) {
-      navmenu.classList.add('navmenu-sticky');
-      navline.classList.add('navline-sticky');
+      navmenu.classList.add('navmenu-sticky-mobile');
+      navline.classList.add('navline-sticky-mobile');
     } else {
-      navmenu.classList.remove('navmenu-sticky');
-      navline.classList.remove('navline-sticky');
+      navmenu.classList.remove('navmenu-sticky-mobile');
+      navline.classList.remove('navline-sticky-mobile');
+    }
+  };
+
+  handleResize = () => {
+    const navmenu = document.getElementById('navbar');
+    const navline = document.getElementById('navbar-line');
+
+    if (window.innerWidth > 960) {
+      navmenu.classList.remove('navmenu-sticky-mobile');
+      navline.classList.remove('navline-sticky-mobile');
     }
   };
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleResize);
   }
 
   render() {
