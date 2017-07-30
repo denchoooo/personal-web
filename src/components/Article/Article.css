@@ -1,0 +1,14 @@
+.article-title {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--green);
+  line-height: 19px;
+  margin-bottom: 5px;
+}
+
+.article-content {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 24px;
+}

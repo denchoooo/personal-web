@@ -5,6 +5,7 @@ import './App.css';
 
 import Home from './Home/Home';
 import Footer from '../components/Footer/Footer';
+import About from './About/About';
 
 class App extends Component {
   render() {
@@ -12,7 +13,10 @@ class App extends Component {
       <Router>
         <div className="app-wrapper">
           <Navbar />
-          <Route exact path="/" component={Home} />
+          <div className="content-wrapper">
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+          </div>
           <Footer />
         </div>
       </Router>

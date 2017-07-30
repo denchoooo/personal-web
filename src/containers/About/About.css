@@ -1,0 +1,13 @@
+.container-about {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 25px;
+}
+
+.about-heading {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  color: var(--red);
+  margin-bottom: 10px;
+}

@@ -8,7 +8,7 @@
   --black: #303030;
   --white: #fcfafe;
   --font-primary: 'PatuaOne-Regular', sans-serif;
-  --font-secondary: 'Raleway-Thin', sans-serif;
+  --font-secondary: 'Raleway', sans-serif;
   --sizeh1: 6.854em;
   --sizeh2: 4.236em;
   --sizeh3: 2.618em;
@@ -25,14 +25,19 @@
   padding: 0;
 }
 
-body {
+html {
   height: 100vh;
-  position: relative;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: var(--white);
 }
 
 #root {
-  height: 100vh;
+  flex: 1;
 }
 
 .centered {
@@ -45,4 +50,22 @@ body {
 
 .text-secondary {
   color: var(--green);
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.line {
+  height: 1px;
+  background-image: linear-gradient(-90deg, #fd5872 0%, #07d3bc 100%);
+}
+
+@media only screen and (max-width: 961px) {
+  .content-wrapper {
+    margin-bottom: 37px;
+  }
 }

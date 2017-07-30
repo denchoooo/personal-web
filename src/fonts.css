@@ -5,18 +5,19 @@
     url('./resources/fonts/Patua_One/PatuaOne-Regular.ttf') format('truetype');
 }
 
+/* Secondary  */
 @font-face {
-  font-family: 'Raleway-Thin';
+  font-family: 'Raleway';
   src: local('Raleway'),
-    url('./resources/fonts/Raleway/Raleway-Bold.ttf') format('truetype');
-  font-weight: 100;
+    url('./resources/fonts/Raleway/Raleway-SemiBold.ttf') format('truetype');
+  font-weight: 600;
   font-style: normal;
 }
 
-/* Secondary  */
-
 @font-face {
-  font-family: 'MavenPro-Regular';
-  src: url('./resources/fonts/Maven_Pro/MavenPro-Regular.ttf')
-    format('truetype');
+  font-family: 'Raleway';
+  src: local('Raleway'),
+    url('./resources/fonts/Raleway/Raleway-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
