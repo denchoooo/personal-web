@@ -11,7 +11,6 @@
   src: local('Raleway'),
     url('./resources/fonts/Raleway/Raleway-SemiBold.ttf') format('truetype');
   font-weight: 600;
-  font-style: normal;
 }
 
 @font-face {

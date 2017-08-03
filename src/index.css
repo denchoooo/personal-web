@@ -30,10 +30,15 @@ html {
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--white);
+}
+
+strong {
+  font-weight: 400 !important;
+  color: var(--red);
 }
 
 #root {
@@ -56,18 +61,12 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .line {
   height: 1px;
   background-image: linear-gradient(-90deg, #fd5872 0%, #07d3bc 100%);
-}
-
-@media only screen and (max-width: 960px) {
-  .content-wrapper {
-    margin-bottom: 37px;
-  }
 }
 
 @media only screen and (min-width: 961px) {

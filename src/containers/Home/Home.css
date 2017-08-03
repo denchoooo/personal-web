@@ -33,6 +33,7 @@
 .container-home {
   align-items: center;
   display: flex;
+  flex: 1;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 960px) {
