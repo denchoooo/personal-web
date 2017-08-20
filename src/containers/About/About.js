@@ -25,7 +25,9 @@ class About extends Component {
             </div>
           </div>
           <div className="about-section-bottom">
-            <div className="about-section3">a</div>
+            <div className="about-section3">
+              <i />
+            </div>
             <div className="about-section4">
               <FlipCard id="things-i-do">
                 <div className="flipcard-front">
