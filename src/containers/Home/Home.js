@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import ghost from '../../services/ghost/ghost';
 import './Home.css';
 import logo from '../../resources/svgs/logo.svg';
+import axios from 'axios';
 
 class Home extends Component {
+  componentDidMount() {}
+
   render() {
     return (
       <div className="container-home">

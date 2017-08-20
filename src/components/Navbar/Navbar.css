@@ -2,6 +2,7 @@
   height: 106px;
   display: flex;
   flex-direction: column;
+  z-index: 999;
 }
 
 .navbar-logo {
