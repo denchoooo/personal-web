@@ -4,6 +4,9 @@ div {
 
 .flipcard-container {
   max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flipcard {
@@ -16,7 +19,6 @@ div {
   font-family: var(--font-secondary);
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 20px;
 }
 
 .flipcard-back {
@@ -26,4 +28,10 @@ div {
 
 .flipped {
   transform: rotateY(180deg);
+}
+
+@media only screen and (max-width: 960px) {
+  .flipcard-back {
+    top: 0;
+  }
 }

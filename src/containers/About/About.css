@@ -1,6 +1,4 @@
 .container-about {
-  display: flex;
-  flex: 1;
   width: 100%;
   max-width: 700px;
   align-self: center;
@@ -10,81 +8,102 @@
   padding-right: 25px;
 }
 
-.about-heading {
+.about-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-areas: "title line line" "subtitle subtitle whatbtn"
+    "icons icons icons" "text text text";
+}
+
+.about-title {
+  grid-area: title;
   font-family: var(--font-primary);
-  font-size: 28px;
   color: var(--red);
-  display: block;
 }
 
-.about-section {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+.about-line {
+  grid-area: line;
+  margin-left: 10px;
+  margin-top: 3px;
 }
 
-.about-section-top {
-  display: flex;
-}
-
-.about-section-middle {
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.middle-left {
+.about-subtitle {
+  grid-area: subtitle;
   font-family: var(--font-secondary);
   color: var(--green);
+  margin: 10px 0 10px 0;
 }
 
-.middle-right {
+.about-what-btn {
+  grid-area: whatbtn;
   font-family: var(--font-secondary);
   font-size: 14px;
   color: var(--gray);
+  margin: 10px 0 10px 0;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  flex: 1;
 }
 
-.about-section-bottom {
+.about-icons {
+  grid-area: icons;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.5em;
+  color: var(--red);
 }
 
-.about-section2 {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 15px;
-}
-
-.about-section3 {
-  padding-right: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.skill-icons {
-  width: 30px;
-}
-
-.about-section3:first-child {
-  margin-top: 0;
-}
-
-.about-section4 {
-  font-family: var(--font-secondary);
-  font-size: 14px;
-  line-height: 24px;
+.about-text {
+  grid-area: text;
+  margin: 5px 0 0 0;
 }
 
 @media only screen and (min-width: 961px) {
-  .about-section-bottom {
-    flex-direction: row;
-    margin-top: 10px;
+  .about-item {
+    grid-template-areas: "title line line" "empty subtitle whatbtn"
+      "icons text text";
+  }
+
+  .about-icons {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .about-text {
+    margin-left: 10px;
+  }
+
+  .about-subtitle {
+    margin-left: 10px;
   }
 }
+
+/* .about-title {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.about-line {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+.about-subtitle {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.about-what-btn {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.about-icons {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.about-text {
+  grid-column: 2/4;
+  grid-row: 3/4;
+} */

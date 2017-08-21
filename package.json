@@ -8,6 +8,7 @@
     "font-awesome": "^4.7.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.1",
+    "mdi": "^2.0.46",
     "prettier": "^1.5.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

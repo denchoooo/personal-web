@@ -1,6 +1,7 @@
 /* Global CSS Files, import global CSS Frameworks here   */
 @import "fonts.css";
 @import "~font-awesome/css/font-awesome.min.css";
+@import "~mdi/css/materialdesignicons.min.css";
 
 :root {
   --green: #07d3bc;
@@ -67,6 +68,7 @@ strong {
 
 .line {
   height: 1px;
+  width: 100%;
   background-image: linear-gradient(-90deg, #fd5872 0%, #07d3bc 100%);
 }
 
