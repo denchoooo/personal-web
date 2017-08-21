@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AboutGrid.css';
+import './About.css';
 
 import FlipCard from '../../components/FlipCard/FlipCard';
 import WhatBtn from '../../components/WhatBtn/WhatBtn';
