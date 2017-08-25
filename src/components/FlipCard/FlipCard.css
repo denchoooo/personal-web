@@ -1,8 +1,9 @@
-div {
+.flipcard-container div {
   backface-visibility: hidden;
 }
 
 .flipcard-container {
+  width: 100%;
   max-width: 700px;
   display: flex;
   justify-content: center;
@@ -23,7 +24,9 @@ div {
 
 .flipcard-back {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   position: absolute;
+  left: 0px;
 }
 
 .flipped {
