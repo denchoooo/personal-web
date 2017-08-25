@@ -1,3 +1,8 @@
 .what-btn {
   cursor: pointer;
 }
+
+.what-btn:hover {
+  transform: scale(1.05);
+  color: var(--green);
+}

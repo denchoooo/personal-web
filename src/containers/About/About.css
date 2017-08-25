@@ -8,18 +8,35 @@
   padding-right: 25px;
 }
 
-.about-item {
+.tr-footer {
+  height: calc(37px + 25px);
+  width: 100%;
+  background: transparent;
+}
+
+.green {
+  color: var(--green);
+}
+
+.container-about:after {
+  content: '';
+  padding-top: 37px;
+}
+
+.about-thingsido {
   display: grid;
   align-items: center;
-  grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: 170px 1fr 1fr;
   grid-template-areas: "title line line" "subtitle subtitle whatbtn"
-    "icons icons icons" "text text text";
+    "icons icons icons" "text text text" "subtitle-wd subtitle-wd whatbtn-wd"
+    "icons-wd icons-wd icons-wd" "text-wd text-wd text-wd";
 }
 
 .about-title {
   grid-area: title;
   font-family: var(--font-primary);
   color: var(--red);
+  text-align: left;
 }
 
 .about-line {
@@ -48,33 +65,119 @@
 .about-icons {
   grid-area: icons;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   font-size: 1.5em;
   color: var(--red);
 }
 
 .about-text {
   grid-area: text;
-  margin: 5px 0 0 0;
+  margin: 5px 0 15px 0;
+}
+
+.subtitle-webdesign {
+  grid-area: subtitle-wd;
+  font-family: var(--font-secondary);
+  color: var(--green);
+  margin: 10px 0 10px 0;
+}
+
+.whatbtn-webdesign {
+  grid-area: whatbtn-wd;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--gray);
+  margin: 10px 0 10px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icons-webdesign {
+  grid-area: icons-wd;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  color: var(--red);
+}
+
+.text-webdesign {
+  grid-area: text-wd;
+  font-family: var(--font-secondary);
+}
+
+.about-me {
+  margin-top: 15px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-areas: "title line line" "pic pic pic" "text text text";
+}
+
+.title-aboutme {
+  grid-area: title;
+  font-family: var(--font-primary);
+  color: var(--red);
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.line-aboutme {
+  grid-area: line;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+.pic-aboutme {
+  grid-area: pic;
+  display: flex;
+  justify-content: center;
+}
+
+.text-aboutme {
+  margin-top: 20px;
+  grid-area: text;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 24px;
 }
 
 @media only screen and (min-width: 961px) {
-  .about-item {
+  .about-thingsido {
     grid-template-areas: "title line line" "empty subtitle whatbtn"
-      "icons text text";
+      "icons text text" "empty2 subtitle-wd whatbtn-wd"
+      "icons-wd text-wd text-wd";
   }
 
-  .about-icons {
+  .about-me {
+    grid-template-columns: 170px 1fr 1fr;
+    grid-template-areas: "title line line" "empty pic pic" "empty2 text text";
+  }
+
+  .about-title,
+  .title-aboutme {
+    text-align: right;
+  }
+
+  .about-icons,
+  .icons-webdesign {
     flex-direction: column;
     align-items: flex-end;
   }
 
-  .about-text {
+  .about-text,
+  .text-webdesign,
+  .text-aboutme {
     margin-left: 10px;
   }
 
-  .about-subtitle {
+  .about-subtitle,
+  .subtitle-webdesign {
     margin-left: 10px;
+  }
+
+  .tr-footer {
+    height: calc(25px);
   }
 }
 

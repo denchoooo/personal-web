@@ -6,6 +6,7 @@ import './App.css';
 import Home from './Home/Home';
 import Footer from '../components/Footer/Footer';
 import About from '../containers/About/About';
+import Works from '../containers/Works/Works';
 
 class App extends Component {
   render() {
@@ -16,6 +17,9 @@ class App extends Component {
           <div className="content-wrapper">
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/works" component={Works} />
+            <Route exact path="/contact" component={Works} />
+            <Route exact path="/blog" component={Works} />
           </div>
           <Footer />
         </div>
