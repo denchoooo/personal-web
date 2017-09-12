@@ -48,6 +48,16 @@
   }
 }
 
+@media only screen and (max-width: 320px) {
+  .home-text-line {
+    width: 100%;
+  }
+
+  .home-subtext {
+    font-size: 13px;
+  }
+}
+
 @media only screen and (min-width: 961px) {
   .container-home {
     justify-content: center;
