@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
 import './App.css';
 
@@ -15,11 +20,14 @@ class App extends Component {
         <div className="app-wrapper">
           <Navbar />
           <div className="content-wrapper">
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/works" component={Works} />
-            <Route exact path="/contact" component={Works} />
-            <Route exact path="/blog" component={Works} />
+            <Switch>
+              <Route exact path="/about" component={About} />
+              <Route exact path="/works" component={Works} />
+              <Route exact path="/contact" component={Works} />
+              <Route exact path="/blog" component={Works} />
+              <Route exact path="/" component={Home} />
+              <Redirect from="/" to="/" component={Home} />
+            </Switch>
           </div>
           <Footer />
         </div>
