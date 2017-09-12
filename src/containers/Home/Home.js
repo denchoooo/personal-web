@@ -15,7 +15,7 @@ class Home extends Component {
             <span className="text-secondary">Cho</span>,
             <br />a web developer.
           </h1>
-          <div className="home-text-line" />
+          <div className="home-text-line line" />
           <h2 className="home-subtext">Front End Developer / Web Designer</h2>
         </div>
       </div>

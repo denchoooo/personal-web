@@ -8,11 +8,7 @@ class Works extends Component {
     return (
       <div className="container-works">
         <h1 className="wip-text">
-          Aww..
-          <br />
-          <br />
-          I'm still building this :(
-          <br />
+          Aww.. I'm still building this :(
           <br />
           Get back to <Link to="/">home</Link> instead
         </h1>
