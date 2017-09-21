@@ -13,6 +13,7 @@ import Home from './Home/Home';
 import Footer from '../components/Footer/Footer';
 import About from '../containers/About/About';
 import Works from '../containers/Works/Works';
+import Blog from '../containers/Blog/Blog';
 
 class App extends Component {
   render() {
@@ -25,7 +26,7 @@ class App extends Component {
               <Route exact path="/about" component={About} />
               <Route exact path="/works" component={Works} />
               <Route exact path="/contact" component={Works} />
-              <Route exact path="/blog" component={Works} />
+              <Route exact path="/blog" component={Blog} />
               <Route exact path="/" component={Home} />
               <Redirect from="/" to="/" component={Home} />
             </Switch>

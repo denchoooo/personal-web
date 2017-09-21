@@ -1,0 +1,45 @@
+.filter-container {
+  display: flex;
+  width: 240px;
+  height: 25px;
+  border-bottom: 1px solid var(--gray);
+}
+
+.filter-input {
+  border: none;
+  width: 215px;
+  background-color: #fcfafe;
+  color: var(--gray);
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.filter-input:focus {
+  border: none;
+  outline: none;
+}
+
+.filter-clear {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.filter-clear:active {
+  background: none;
+}
+
+.clear-cross {
+  position: relative;
+  top: 11px;
+  width: 17px;
+  border-bottom: 1px solid gray;
+  transform: rotate(45deg);
+  transition: opacity 0.15s linear;
+}
+
+.clear-cross:last-of-type {
+  top: 10px;
+  transform: rotate(-45deg);
+}
