@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './About.css';
+import { CSSTransitionGroup } from 'react-transition-group';
 
+import './About.css';
 import FlipCard from '../../components/FlipCard/FlipCard';
 import WhatBtn from '../../components/WhatBtn/WhatBtn';
 
@@ -9,9 +10,17 @@ class AboutGrid extends Component {
     return (
       <div className="container-about">
         <div className="about-thingsido">
-          <div className="about-title">
-            <h1 className="about-heading">Things I Do</h1>
-          </div>
+          <CSSTransitionGroup
+            transitionName="example"
+            transitionAppear={true}
+            transitionAppearTimeout={500}
+            transitionEnter={false}
+            transitionLeave={false}
+          >
+            <div className="about-title">
+              <h1 className="about-heading">Things I Do</h1>
+            </div>
+          </CSSTransitionGroup>
           <div className="about-subtitle">Front End Development</div>
           <div className="about-what-btn">
             <WhatBtn flipContainerId="frontend" />
