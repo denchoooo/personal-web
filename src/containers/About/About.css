@@ -26,7 +26,7 @@
 .about-thingsido {
   display: grid;
   align-items: center;
-  grid-template-columns: 170px 1fr 1fr;
+  grid-template-columns: auto 1fr 1fr;
   grid-template-areas: 'title line line' 'subtitle subtitle whatbtn'
     'icons icons icons' 'text text text' 'subtitle-wd subtitle-wd whatbtn-wd'
     'icons-wd icons-wd icons-wd' 'text-wd text-wd text-wd';
@@ -68,6 +68,10 @@
   justify-content: center;
   font-size: 1.5em;
   color: var(--red);
+}
+
+.about-heading {
+  font-size: 24px;
 }
 
 .about-text {
@@ -147,6 +151,10 @@
     grid-template-areas: 'title line line' 'empty subtitle whatbtn'
       'icons text text' 'empty2 subtitle-wd whatbtn-wd'
       'icons-wd text-wd text-wd';
+  }
+
+  .about-heading {
+    font-size: 32px;
   }
 
   .about-me {

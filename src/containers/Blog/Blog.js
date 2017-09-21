@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import Filter from '../../components/Filter/Filter';
+import BlogList from '../../components/BlogList/BlogList';
+import './Blog.css';
 
 class Blog extends Component {
   render() {
     return (
       <div>
-        Blog
-        <Filter />
+        <div className="blog-filter">
+          <Filter />
+        </div>
+        <BlogList />
       </div>
     );
   }
