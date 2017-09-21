@@ -1,9 +1,13 @@
 .home-text {
   color: var(--black);
   font-family: var(--font-primary);
-  font-size: 38px;
+  font-size: 36px;
   line-height: 46px;
   margin-bottom: 5px;
+}
+
+.notice {
+  color: var(--red);
 }
 
 .home-subtext {
@@ -53,7 +57,7 @@
   }
 
   .home-subtext {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
