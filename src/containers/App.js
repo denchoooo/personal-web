@@ -26,9 +26,9 @@ class App extends Component {
               <Route exact path="/about" component={About} />
               <Route exact path="/works" component={Works} />
               <Route exact path="/contact" component={Works} />
-              <Route exact path="/blog" component={Blog} />
+              <Route path="/blog/:id?" component={Blog} />
               <Route exact path="/" component={Home} />
-              <Redirect from="/" to="/" component={Home} />
+              <Redirect to="/" />
             </Switch>
           </div>
           <Footer />

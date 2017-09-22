@@ -43,3 +43,18 @@
   top: 10px;
   transform: rotate(-45deg);
 }
+
+@media only screen and (min-width: 769px) {
+  .filter-input {
+    font-size: 22px;
+  }
+
+  .filter-container {
+    height: 33px;
+  }
+
+  .filter-clear {
+    position: relative;
+    top: 7px;
+  }
+}

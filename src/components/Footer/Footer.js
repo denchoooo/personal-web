@@ -16,7 +16,10 @@ const Footer = () => {
             to="https://github.com/denichodev"
             className="fa fa-linkedin"
           />
-          <SocialIcon to="https://facebook" className="fa fa-twitter" />
+          <SocialIcon
+            to="https://twitter.com/denichodev"
+            className="fa fa-twitter"
+          />
         </div>
       </div>
     </div>

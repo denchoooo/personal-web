@@ -2,3 +2,39 @@
   margin-left: 20px;
   margin-top: 25px;
 }
+
+.blog-page-container {
+  align-self: center;
+  overflow: auto;
+}
+
+.blog-left {
+  overflow-y: auto;
+}
+
+.vertical-line {
+  display: none;
+}
+
+@media only screen and (min-width: 1041px) {
+  .blog-page-container {
+    display: flex;
+    align-self: auto;
+  }
+
+  .blog-right {
+    display: block;
+    flex: 1;
+  }
+
+  .blog-left {
+    flex: 1;
+  }
+
+  .vertical-line {
+    display: block;
+    width: 1px;
+    height: calc(100vh - 70px);
+    background: black;
+  }
+}

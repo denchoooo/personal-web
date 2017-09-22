@@ -5,7 +5,7 @@ import './SocialIcon.css';
 const SocialIcon = ({ to, className }) => {
   return (
     <div>
-      <a href={to}>
+      <a href={to} target="_blank">
         <i className={`social-icon centered ${className}`} />
       </a>
     </div>

@@ -70,6 +70,11 @@ strong {
   justify-content: flex-start;
 }
 
+.blog-line::after {
+  content: '';
+  height: 1px;
+}
+
 .line {
   height: 1px;
   width: 100%;
@@ -80,6 +85,15 @@ strong {
   font-family: var(--font-primary);
   line-height: 40px;
   text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space */
+  background: transparent; /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
 }
 
 @media only screen and (min-width: 961px) {
