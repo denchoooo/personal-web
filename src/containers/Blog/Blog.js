@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import http from '../../services/http';
 import Filter from '../../components/Filter/Filter';
 import BlogList from '../../components/BlogList/BlogList';
 import BlogView from '../../components/BlogView/BlogView';
@@ -16,6 +18,16 @@ class Blog extends Component {
   componentDidMount() {
     this.updateWidth();
     window.addEventListener('resize', this.updateWidth);
+
+    http.get(
+      '/posts',
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   componentWillUnmount() {

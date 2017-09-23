@@ -1,4 +1,5 @@
 import React from 'react';
+import './BlogView.css';
 
 const BlogView = props => {
   console.log(props);
