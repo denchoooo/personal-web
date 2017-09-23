@@ -6,6 +6,7 @@
   padding-top: 25px;
   padding-left: 25px;
   padding-right: 25px;
+  overflow-y: auto;
 }
 
 .tr-footer {
@@ -150,6 +151,10 @@
   @-moz-document url-prefix() {
     .content-wrapper {
       overflow-y: auto;
+    }
+
+    .container-about {
+      overflow-y: visible;
     }
   }
 }
