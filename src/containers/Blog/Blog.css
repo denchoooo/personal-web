@@ -31,13 +31,6 @@
     flex: 1;
   }
 
-  #test {
-    border-right: 1px solid red;
-    border-left: 2px solid red;
-    margin-left: 50px;
-    width: 50px;
-  }
-
   .vertical-line {
     display: block;
     width: 1px;
@@ -50,8 +43,12 @@
       height: 100%;
       border-left-width: 1px;
       border-left-style: solid;
-      -moz-border-image: -moz-linear-gradient(#fd5872, #07d3bc) 1 100%;
+      -moz-border-image: -moz-linear-gradient(#07d3bc, #fd5872) 1 100%;
       background: transparent;
+    }
+
+    .blog-page-container {
+      overflow-y: auto;
     }
   }
 }
