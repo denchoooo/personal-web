@@ -9,7 +9,7 @@
     url('./resources/fonts/Patua_One/PatuaOne-Regular.ttf') format('truetype'),
     url('./resources/fonts/Patua_One/PatuaOne-Regular.svg#svgFontName')
       format('svg'); /* Legacy iOS */
-  font-weight: 300;
+  font-weight: 700;
 }
 
 @font-face {

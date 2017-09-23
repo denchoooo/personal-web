@@ -30,21 +30,16 @@ class Filter extends Component {
           className="filter-input"
           placeholder="Filter..."
         />
-        <div className="filter-clear" onClick={this.handleClear}>
-          <div
-            className="clear-cross"
-            style={{
-              visibility: this.state.filter ? 'visible' : 'hidden',
-              opacity: this.state.filter ? 1 : 0
-            }}
-          />
-          <div
-            className="clear-cross"
-            style={{
-              visibility: this.state.filter ? 'visible' : 'hidden',
-              opacity: this.state.filter ? 1 : 0
-            }}
-          />
+        <div
+          className="filter-clear"
+          onClick={this.handleClear}
+          style={{
+            opacity: this.state.filter ? 1 : 0,
+            cursor: this.state.filter ? 'pointer' : 'auto'
+          }}
+        >
+          <div className="clear-cross" />
+          <div className="clear-cross" />
         </div>
       </div>
     );

@@ -10,43 +10,30 @@
 }
 
 .blog-title {
+  margin-top: 15px;
   color: #fd5872;
   font-family: 'PatuaOne-Regular';
   font-size: 16px;
+  font-weight: 100;
+}
+
+.blog-meta {
+  display: flex;
+  font-size: 11px;
+  margin-top: 6px;
 }
 
 .blog-date {
-  margin-top: 4px;
+  display: block;
   color: #7b7b7b;
   font-family: 'Raleway';
-  font-size: 12px;
 }
 
 .blog-featured {
   display: flex;
-  margin-top: 5px;
+  margin-top: 6px;
   width: 100%;
   height: auto;
-}
-
-.blog-bottom {
-  display: flex;
-  margin-top: 10px;
-}
-
-.like-container {
-  display: flex;
-  align-items: center;
-  color: #fd5872;
-  font-size: 12px;
-}
-
-.heart {
-  margin-right: 7px;
-}
-
-.like-count {
-  font-family: 'Raleway';
 }
 
 .tag-container {
@@ -60,9 +47,8 @@
 }
 
 .tag-list li {
-  margin-right: 6px;
+  margin-left: 7px;
   font-family: 'Raleway';
-  font-size: 12px;
   color: #7b7b7b;
 }
 
@@ -75,17 +61,25 @@
 
 @media only screen and (min-width: 769px) {
   .blog-title {
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: 100;
   }
 
   .blog-outer {
     max-width: none;
   }
 
-  .blog-date,
-  .like-count,
+  .blog-meta {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .blog-featured {
+    margin-top: 10px;
+  }
+
   .tag-list li {
-    font-size: 16px;
+    margin-left: 10px;
   }
 }
 

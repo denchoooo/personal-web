@@ -23,7 +23,8 @@
 .filter-clear {
   width: 25px;
   height: 25px;
-  cursor: pointer;
+  cursor: auto;
+  transition: all 0.15s linear;
 }
 
 .filter-clear:active {
@@ -36,7 +37,6 @@
   width: 17px;
   border-bottom: 1px solid #7b7b7b;
   transform: rotate(45deg);
-  transition: opacity 0.15s linear;
 }
 
 .clear-cross:last-of-type {
