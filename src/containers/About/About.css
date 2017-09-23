@@ -23,37 +23,51 @@
   padding-top: 37px;
 }
 
+.n-row1 {
+  display: flex;
+}
+
+.n-row2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.n-aboutme {
+  display: flex;
+}
+
+.line-aboutme {
+  flex: 1;
+  align-self: center;
+}
+
+.about-line {
+  flex: 1;
+  align-self: center;
+}
+
 .about-thingsido {
-  display: grid;
   align-items: center;
-  grid-template-columns: auto 1fr 1fr;
-  grid-template-areas: 'title line line' 'subtitle subtitle whatbtn'
-    'icons icons icons' 'text text text' 'subtitle-wd subtitle-wd whatbtn-wd'
-    'icons-wd icons-wd icons-wd' 'text-wd text-wd text-wd';
 }
 
 .about-title {
-  grid-area: title;
   font-family: 'PatuaOne-Regular';
   color: #fd5872;
   text-align: left;
 }
 
 .about-line {
-  grid-area: line;
   margin-left: 10px;
   margin-top: 3px;
 }
 
 .about-subtitle {
-  grid-area: subtitle;
   font-family: 'Raleway';
   color: #07d3bc;
   margin: 10px 0 10px 0;
 }
 
 .about-what-btn {
-  grid-area: whatbtn;
   font-family: 'Raleway';
   font-size: 14px;
   color: #7b7b7b;
@@ -63,8 +77,8 @@
 }
 
 .about-icons {
-  grid-area: icons;
   display: flex;
+  align-items: center;
   justify-content: center;
   font-size: 1.5em;
   color: #fd5872;
@@ -75,19 +89,16 @@
 }
 
 .about-text {
-  grid-area: text;
   margin: 5px 0 15px 0;
 }
 
 .subtitle-webdesign {
-  grid-area: subtitle-wd;
   font-family: 'Raleway';
   color: #07d3bc;
   margin: 10px 0 10px 0;
 }
 
 .whatbtn-webdesign {
-  grid-area: whatbtn-wd;
   font-family: 'Raleway';
   font-size: 14px;
   color: #7b7b7b;
@@ -97,7 +108,6 @@
 }
 
 .icons-webdesign {
-  grid-area: icons-wd;
   display: flex;
   justify-content: center;
   font-size: 1.5em;
@@ -105,20 +115,15 @@
 }
 
 .text-webdesign {
-  grid-area: text-wd;
   font-family: 'Raleway';
 }
 
 .about-me {
   margin-top: 15px;
-  display: grid;
   align-items: center;
-  grid-template-columns: auto 1fr 1fr;
-  grid-template-areas: 'title line line' 'pic pic pic' 'text text text';
 }
 
 .title-aboutme {
-  grid-area: title;
   font-family: 'PatuaOne-Regular';
   color: #fd5872;
   display: flex;
@@ -127,23 +132,96 @@
 }
 
 .line-aboutme {
-  grid-area: line;
   margin-left: 10px;
   margin-top: 3px;
 }
 
 .pic-aboutme {
-  grid-area: pic;
   display: flex;
   justify-content: center;
 }
 
 .text-aboutme {
   margin-top: 20px;
-  grid-area: text;
   font-family: 'Raleway';
   font-size: 14px;
   line-height: 24px;
+}
+
+@supports (display: grid) {
+  .about-thingsido {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-areas: 'title line line' 'subtitle subtitle whatbtn'
+      'icons icons icons' 'text text text' 'subtitle-wd subtitle-wd whatbtn-wd'
+      'icons-wd icons-wd icons-wd' 'text-wd text-wd text-wd';
+  }
+
+  .about-title {
+    grid-area: title;
+  }
+
+  .about-line {
+    grid-area: line;
+  }
+
+  .about-subtitle {
+    grid-area: subtitle;
+  }
+
+  .about-what-btn {
+    grid-area: whatbtn;
+  }
+
+  .about-icons {
+    grid-area: icons;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #fd5872;
+  }
+
+  .about-text {
+    grid-area: text;
+  }
+
+  .subtitle-webdesign {
+    grid-area: subtitle-wd;
+  }
+
+  .whatbtn-webdesign {
+    grid-area: whatbtn-wd;
+  }
+
+  .icons-webdesign {
+    grid-area: icons-wd;
+  }
+
+  .text-webdesign {
+    grid-area: text-wd;
+  }
+
+  .about-me {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-areas: 'title line line' 'pic pic pic' 'text text text';
+  }
+
+  .title-aboutme {
+    grid-area: title;
+  }
+
+  .line-aboutme {
+    grid-area: line;
+  }
+
+  .pic-aboutme {
+    grid-area: pic;
+  }
+
+  .text-aboutme {
+    grid-area: text;
+  }
 }
 
 @media only screen and (min-width: 1041px) {
@@ -159,30 +237,40 @@
 }
 
 @media only screen and (min-width: 961px) {
-  .about-thingsido {
-    grid-template-areas: 'title line line' 'empty subtitle whatbtn'
-      'icons text text' 'empty2 subtitle-wd whatbtn-wd'
-      'icons-wd text-wd text-wd';
+  @supports (display: grid) {
+    .about-thingsido {
+      grid-template-areas: 'title line line' 'empty subtitle whatbtn'
+        'icons text text' 'empty2 subtitle-wd whatbtn-wd'
+        'icons-wd text-wd text-wd';
+    }
+
+    .about-me {
+      grid-template-columns: 170px 1fr 1fr;
+      grid-template-areas: 'title line line' 'empty pic pic' 'empty2 text text';
+    }
+
+    .about-icons,
+    .icons-webdesign {
+      flex-direction: column;
+      align-items: flex-end;
+    }
   }
 
   .about-heading {
     font-size: 32px;
   }
 
-  .about-me {
-    grid-template-columns: 170px 1fr 1fr;
-    grid-template-areas: 'title line line' 'empty pic pic' 'empty2 text text';
+  .about-title,
+  .title-aboutme {
+    text-align: right;
+  }
+  .about-heading {
+    font-size: 32px;
   }
 
   .about-title,
   .title-aboutme {
     text-align: right;
-  }
-
-  .about-icons,
-  .icons-webdesign {
-    flex-direction: column;
-    align-items: flex-end;
   }
 
   .about-text,

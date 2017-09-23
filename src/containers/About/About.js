@@ -6,27 +6,37 @@ import FlipCard from '../../components/FlipCard/FlipCard';
 import WhatBtn from '../../components/WhatBtn/WhatBtn';
 
 class AboutGrid extends Component {
+  componentDidMount() {
+    // Removing all the flex container if CSS-Grid is supported
+    if (CSS.supports('display', 'grid')) {
+      const allNogrids = document.querySelectorAll('.nogrid');
+      const all = Array.prototype.slice.call(allNogrids);
+      all.map(nogrid => {
+        while (nogrid.firstChild) {
+          nogrid.parentNode.insertBefore(nogrid.firstChild, nogrid);
+        }
+        nogrid.parentNode.removeChild(nogrid);
+      });
+    }
+  }
+
   render() {
     return (
       <div className="container-about">
         <div className="about-thingsido">
-          <CSSTransitionGroup
-            transitionName="example"
-            transitionAppear={true}
-            transitionAppearTimeout={500}
-            transitionEnter={false}
-            transitionLeave={false}
-          >
+          <div className="nogrid n-row1">
             <div className="about-title">
               <h1 className="about-heading">Things I Do</h1>
             </div>
-          </CSSTransitionGroup>
-          <div className="about-subtitle">Front End Development</div>
-          <div className="about-what-btn">
-            <WhatBtn flipContainerId="frontend" />
+            <div className="about-line">
+              <div className="line" />
+            </div>
           </div>
-          <div className="about-line">
-            <div className="line" />
+          <div className="nogrid n-row2">
+            <div className="about-subtitle">Front End Development</div>
+            <div className="about-what-btn">
+              <WhatBtn flipContainerId="frontend" />
+            </div>
           </div>
           <div className="about-icons">
             <div className="skill-icon">
@@ -127,11 +137,13 @@ class AboutGrid extends Component {
           </div>
         </div>
         <div className="about-me">
-          <div className="title-aboutme">
-            <h1 className="about-heading">Me</h1>
-          </div>
-          <div className="line-aboutme">
-            <div className="line" />
+          <div className="nogrid n-aboutme">
+            <div className="title-aboutme">
+              <h1 className="about-heading">Me</h1>
+            </div>
+            <div className="line-aboutme">
+              <div className="line" />
+            </div>
           </div>
           <div className="pic-aboutme">
             <img src="http://via.placeholder.com/170x250" alt="Me" />
