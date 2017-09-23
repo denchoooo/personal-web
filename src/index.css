@@ -3,24 +3,6 @@
 @import '~font-awesome/css/font-awesome.min.css';
 @import '~mdi/css/materialdesignicons.min.css';
 
-:root {
-  --green: #07d3bc;
-  --red: #fd5872;
-  --black: #303030;
-  --white: #fcfafe;
-  --gray: #7b7b7b;
-  --font-primary: 'PatuaOne-Regular', sans-serif;
-  --font-secondary: 'Raleway', sans-serif;
-  --sizeh1: 6.854em;
-  --sizeh2: 4.236em;
-  --sizeh3: 2.618em;
-  --sizeh4: 1.618em;
-  --sizeh5: 1em;
-  --sizeh6: 0.618em;
-  --sizebody: 1.125em;
-  --sizecaption: 1em;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,12 +17,12 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
+  background-color: #fcfafe;
 }
 
 strong {
   font-weight: 400 !important;
-  color: var(--red);
+  color: #fd5872;
 }
 
 #root {
@@ -52,11 +34,11 @@ strong {
 }
 
 .text-primary {
-  color: var(--red);
+  color: #fd5872;
 }
 
 .text-secondary {
-  color: var(--green);
+  color: #07d3bc;
 }
 
 .hidden {
@@ -82,7 +64,7 @@ strong {
 }
 
 .wip-text {
-  font-family: var(--font-primary);
+  font-family: 'PatuaOne-Regular';
   line-height: 40px;
   text-align: center;
 }
@@ -90,10 +72,6 @@ strong {
 ::-webkit-scrollbar {
   width: 0px; /* remove scrollbar space */
   background: transparent; /* optional: just make scrollbar invisible */
-}
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #ff0000;
 }
 
 @media only screen and (min-width: 961px) {

@@ -12,14 +12,6 @@
   font-weight: 300;
 }
 
-/* Secondary  */
-/* @font-face {
-  font-family: 'Raleway';
-  src: local('Raleway'),
-    url('./resources/fonts/Raleway/Raleway-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-} */
-
 @font-face {
   font-family: 'Raleway';
   src: url('./resources/fonts/Raleway/Raleway-SemiBold.eot'); /* IE9 Compat Modes */

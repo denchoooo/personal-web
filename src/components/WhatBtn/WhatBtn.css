@@ -4,5 +4,5 @@
 
 .what-btn:hover {
   transform: scale(1.05);
-  color: var(--green);
+  color: #07d3bc;
 }

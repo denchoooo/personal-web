@@ -1,29 +1,29 @@
 .nav-item {
   display: block;
-  color: var(--red);
-  font-family: var(--font-primary);
+  color: #fd5872;
+  font-family: 'PatuaOne-Regular';
   font-size: 14px;
   line-height: 15px;
   flex: 1;
   text-align: center;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 a {
   text-decoration: none;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 a:link {
-  color: var(--red);
+  color: #fd5872;
 }
 
 a:visited {
-  color: var(--red);
+  color: #fd5872;
 }
 
 a:hover {
-  color: var(--green);
+  color: #07d3bc;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 960px) {

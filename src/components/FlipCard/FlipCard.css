@@ -17,7 +17,7 @@
   align-items: center;
   transform-style: preserve-3d;
   transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  font-family: var(--font-secondary);
+  font-family: 'Raleway';
   font-size: 14px;
   line-height: 24px;
 }

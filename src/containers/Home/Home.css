@@ -1,17 +1,17 @@
 .home-text {
-  color: var(--black);
-  font-family: var(--font-primary);
+  color: #303030;
+  font-family: 'PatuaOne-Regular';
   font-size: 36px;
   line-height: 46px;
   margin-bottom: 5px;
 }
 
 .notice {
-  color: var(--red);
+  color: #fd5872;
 }
 
 .home-subtext {
-  font-family: var(--font-secondary);
+  font-family: 'Raleway';
   font-size: 14px;
   letter-spacing: 1.6px;
   line-height: 27px;
@@ -74,14 +74,14 @@
   }
 
   .home-text {
-    color: var(--black);
-    font-family: var(--font-primary);
+    color: #303030;
+    font-family: 'PatuaOne-Regular';
     font-size: 48px;
     line-height: 59px;
   }
 
   .home-subtext {
-    font-family: var(--font-secondary);
+    font-family: 'Raleway';
     font-size: 18px;
     letter-spacing: 1.6px;
     line-height: 27px;

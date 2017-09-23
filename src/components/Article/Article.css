@@ -1,14 +1,14 @@
 .article-title {
-  font-family: var(--font-secondary);
+  font-family: 'Raleway';
   font-size: 16px;
   font-weight: 600;
-  color: var(--green);
+  color: #0723bc;
   line-height: 19px;
   margin-bottom: 5px;
 }
 
 .article-content {
-  font-family: var(--font-secondary);
+  font-family: 'Raleway';
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 20px;

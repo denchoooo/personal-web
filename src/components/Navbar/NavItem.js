@@ -10,7 +10,7 @@ const NavItem = ({ text, linkTo, exact }) => {
         exact={exact}
         to={linkTo}
         activeStyle={{
-          color: 'var(--green)'
+          color: '#07d3bc'
         }}
       >
         {text}

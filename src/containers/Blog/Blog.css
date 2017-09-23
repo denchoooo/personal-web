@@ -1,6 +1,6 @@
 .blog-filter {
-  margin-left: 20px;
-  margin-top: 25px;
+  margin-left: 20px !important;
+  margin-top: 25px !important;
 }
 
 .blog-page-container {
@@ -35,6 +35,6 @@
     display: block;
     width: 1px;
     height: calc(100vh - 70px);
-    background: black;
+    background: linear-gradient(0deg, #fd5872 0%, #07d3bc 100%);
   }
 }

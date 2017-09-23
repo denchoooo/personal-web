@@ -11,12 +11,12 @@
   align-items: center;
   justify-content: center;
   height: 70px;
-  background-color: var(--white);
+  background-color: #fcfafe;
 }
 
 .navbar {
   flex: 1;
-  background-color: var(--white);
+  background-color: #fcfafe;
 }
 
 .navitem-container {

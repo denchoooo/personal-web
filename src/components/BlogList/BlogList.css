@@ -10,15 +10,15 @@
 }
 
 .blog-title {
-  color: var(--red);
-  font-family: var(--font-primary);
+  color: #fd5872;
+  font-family: 'PatuaOne-Regular';
   font-size: 16px;
 }
 
 .blog-date {
   margin-top: 4px;
-  color: var(--gray);
-  font-family: var(--font-secondary);
+  color: #7b7b7b;
+  font-family: 'Raleway';
   font-size: 12px;
 }
 
@@ -37,7 +37,7 @@
 .like-container {
   display: flex;
   align-items: center;
-  color: var(--red);
+  color: #fd5872;
   font-size: 12px;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .like-count {
-  font-family: var(--font-secondary);
+  font-family: 'Raleway';
 }
 
 .tag-container {
@@ -61,9 +61,9 @@
 
 .tag-list li {
   margin-right: 6px;
-  font-family: var(--font-secondary);
+  font-family: 'Raleway';
   font-size: 12px;
-  color: var(--gray);
+  color: #7b7b7b;
 }
 
 .blog-line {

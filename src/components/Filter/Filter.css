@@ -2,15 +2,15 @@
   display: flex;
   width: 240px;
   height: 25px;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid #7b7b7b;
 }
 
 .filter-input {
   border: none;
   width: 215px;
   background-color: #fcfafe;
-  color: var(--gray);
-  font-family: var(--font-secondary);
+  color: #7b7b7b;
+  font-family: 'Raleway';
   font-size: 14px;
   letter-spacing: 1px;
 }
@@ -34,7 +34,7 @@
   position: relative;
   top: 11px;
   width: 17px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #7b7b7b;
   transform: rotate(45deg);
   transition: opacity 0.15s linear;
 }

@@ -57,7 +57,9 @@ class Blog extends Component {
           <div className="tr-footer" />
         </div>
         <div className="vertical-line" />
-        <div className="blog-right">Select post to view it</div>
+        {this.state.width > 1040 && (
+          <div className="blog-right">Select post to view it</div>
+        )}
       </div>
     );
   }
