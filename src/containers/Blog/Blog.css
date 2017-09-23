@@ -5,9 +5,9 @@
 
 .blog-page-container {
   align-self: center;
-  overflow: auto;
 }
 
+/* THIS WHAT MAKES BLOG SCROLLS */
 .blog-left {
   overflow-y: auto;
 }
@@ -31,10 +31,27 @@
     flex: 1;
   }
 
+  #test {
+    border-right: 1px solid red;
+    border-left: 2px solid red;
+    margin-left: 50px;
+    width: 50px;
+  }
+
   .vertical-line {
     display: block;
     width: 1px;
     height: calc(100vh - 70px);
     background: linear-gradient(0deg, #fd5872 0%, #07d3bc 100%);
+  }
+
+  @-moz-document url-prefix() {
+    .vertical-line {
+      height: 100%;
+      border-left-width: 1px;
+      border-left-style: solid;
+      -moz-border-image: -moz-linear-gradient(#fd5872, #07d3bc) 1 100%;
+      background: transparent;
+    }
   }
 }

@@ -6,7 +6,6 @@
   padding-top: 25px;
   padding-left: 25px;
   padding-right: 25px;
-  overflow-y: auto;
 }
 
 .tr-footer {
@@ -145,6 +144,14 @@
   font-family: 'Raleway';
   font-size: 14px;
   line-height: 24px;
+}
+
+@media only screen and (min-width: 1041px) {
+  @-moz-document url-prefix() {
+    .content-wrapper {
+      overflow-y: auto;
+    }
+  }
 }
 
 @media only screen and (min-width: 961px) {

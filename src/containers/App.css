@@ -2,5 +2,10 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
+}
+
+@media only screen and (min-width: 1041px) {
+  .content-wrapper {
+    overflow: hidden;
+  }
 }

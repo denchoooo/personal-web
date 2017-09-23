@@ -133,7 +133,6 @@ class BlogList extends Component {
           <img className="blog-featured" src={PostMock} alt="PostMock1" />
           <div className="blog-bottom" />
         </div>
-        <div className="blog-line" />
       </div>
     );
   }

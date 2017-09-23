@@ -42,7 +42,7 @@ class Blog extends Component {
             </div>
           )}
           <div className="vertical-line" />
-          <div className="blog-right">{<div>{id}</div>}</div>
+          <div className="blog-right">{<div id="test">heyy</div>}</div>
         </div>
       );
     }
