@@ -190,7 +190,7 @@
 .b-featured-box {
   opacity: 0;
   height: 0;
-  margin: 0;
+  margin-bottom: 10px;
   overflow: hidden;
   transition: all 100ms linear;
 }
