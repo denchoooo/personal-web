@@ -15,26 +15,30 @@ class NewBlog extends Component {
     this.state = {
       posts: [],
       filter: '',
-      filteredPost: []
+      filteredPost: [],
+      quote: this.getQuote()
     };
   }
 
   componentDidMount() {
     this.getQuote();
 
-    client
-      .getEntries({
-        content_type: process.env.REACT_APP_POST_CONTENT_TYPE_ID
-      })
-      .then(res => {
-        this.setState({
-          posts: res.items.map(item => {
-            return { ...item, title: item.fields.title };
-          }),
-          filteredPost: res.items
-        });
-      })
-      .catch(console.error);
+    setTimeout(
+      client
+        .getEntries({
+          content_type: process.env.REACT_APP_POST_CONTENT_TYPE_ID
+        })
+        .then(res => {
+          this.setState({
+            posts: res.items.map(item => {
+              return { ...item, title: item.fields.title };
+            }),
+            filteredPost: res.items
+          });
+        })
+        .catch(console.error),
+      300
+    );
   }
 
   getQuote = () => {
@@ -54,7 +58,18 @@ class NewBlog extends Component {
     const filtered = this.filterPost(posts);
 
     if (posts.length <= 0) {
-      return;
+      return (
+        <div className="blog-box smooth-transition not-found">
+          Fetching data...
+          <div className={'b-featured-box'}>
+            <img
+              className={`b-featured-img smooth-transition`}
+              src="https://images.contentful.com/s0t5kg4bsgzu/bXvdSYHB3Guy2uUmuEco8/5b44c565ab9205888156dae368d29f25/alice-in-wonderland.gif"
+              alt="Post"
+            />
+          </div>
+        </div>
+      );
     }
 
     if (filtered <= 0) {
@@ -89,7 +104,6 @@ class NewBlog extends Component {
   };
 
   render() {
-    const quote = this.getQuote();
     return (
       <div className="newblog-outer">
         <div className="newblog-left animated slideInUp">
@@ -117,8 +131,8 @@ class NewBlog extends Component {
             </div>
           </div>
           <div className="quote-decor">
-            <div className="quote-box" data-tooltip={quote.author}>
-              {quote.text}
+            <div className="quote-box" data-tooltip={this.state.quote.author}>
+              {this.state.quote.text}
             </div>
           </div>
         </div>
