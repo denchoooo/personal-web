@@ -21,7 +21,7 @@ class AboutGrid extends Component {
 
   render() {
     return (
-      <div className="container-about">
+      <div className="container-about animated slideInUp">
         <div className="about-thingsido">
           <div className="nogrid n-row1">
             <div className="about-title">
@@ -38,19 +38,19 @@ class AboutGrid extends Component {
             </div>
           </div>
           <div className="about-icons">
-            <div className="skill-icon">
+            <div className="skill-icon" data-tooltip="Javascript">
               <i className="mdi mdi-language-javascript" />
             </div>
-            <div className="skill-icon">
+            <div className="skill-icon" data-tooltip="ReactJS">
               <i className="mdi mdi-react" />
             </div>
-            <div className="skill-icon">
+            <div className="skill-icon" data-tooltip="Sass">
               <i className="mdi mdi-sass" />
             </div>
-            <div className="skill-icon">
+            <div className="skill-icon" data-tooltip="CSS3">
               <i className="mdi mdi-language-css3" />
             </div>
-            <div className="skill-icon">
+            <div className="skill-icon" data-tooltip="HTML5">
               <i className="mdi mdi-language-html5" />
             </div>
           </div>

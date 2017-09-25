@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
+
 import './Home.css';
 import logo from '../../resources/svgs/logo.svg';
 
 class Home extends Component {
   render() {
     return (
-      <div className="container-home">
+      <div className="container-home animated fadeIn">
         <img className="logo-big" src={logo} alt="Logo Big" />
-        <div className="text-area">
+        <div className="text-area animated slideInRight">
           <h1 className="home-text heading4">
             Hello,<br />I’m <span className="text-primary">Deni</span>{' '}
             <span className="text-secondary">Cho</span>,

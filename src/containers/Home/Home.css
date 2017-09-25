@@ -39,6 +39,19 @@
   flex: 1;
 }
 
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.block {
+  display: block;
+}
+
 @media only screen and (min-width: 769px) and (max-width: 960px) {
   .container-home {
     justify-content: center;

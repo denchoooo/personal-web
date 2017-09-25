@@ -2,6 +2,7 @@
 @import 'fonts.css';
 @import '~font-awesome/css/font-awesome.min.css';
 @import '~mdi/css/materialdesignicons.min.css';
+@import './animate.css';
 
 * {
   box-sizing: border-box;
@@ -72,6 +73,158 @@ strong {
 ::-webkit-scrollbar {
   width: 0px; /* remove scrollbar space */
   background: transparent; /* optional: just make scrollbar invisible */
+}
+
+/* START data-tooltip STYLES */
+[data-tooltip] {
+  position: relative; /* opinion 1 */
+}
+
+/* Applies to all data-tooltips */
+[data-tooltip]::before,
+[data-tooltip]::after {
+  text-transform: none; /* opinion 2 */
+  font-size: 0.6em; /* opinion 3 */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[data-tooltip]::before {
+  content: '';
+  border: 5px solid transparent; /* opinion 4 */
+  z-index: 1001; /* absurdity 1 */
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip); /* magic! */
+
+  /* most of the rest of this is opinion */
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+
+  /* 
+    Let the content set the size of the data-tooltips 
+    but this will also keep them from being obnoxious
+    */
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overdata-flow: hidden;
+  text-overdata-flow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: 0.3ch;
+  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+  background: #fd5872;
+  color: #fcfafe;
+  z-index: 1000; /* absurdity 2 */
+}
+
+/* Make the data-tooltips respond to hover */
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+  display: block;
+}
+
+/* don't show empty data-tooltips */
+[data-tooltip='']::before,
+[data-tooltip='']::after {
+  display: none !important;
+}
+
+/* data-flow: UP */
+[data-tooltip]:not([data-flow])::before,
+[data-tooltip][data-flow^='up']::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #fd5872;
+}
+[data-tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow^='up']::after {
+  bottom: calc(100% + 5px);
+}
+[data-tooltip]:not([data-flow])::before,
+[data-tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow^='up']::before,
+[data-tooltip][data-flow^='up']::after {
+  left: 50%;
+  transform: translate(-50%, -0.5em);
+}
+
+/* data-flow: DOWN */
+[data-tooltip][data-flow^='down']::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #fd5872;
+}
+[data-tooltip][data-flow^='down']::after {
+  top: calc(100% + 5px);
+}
+[data-tooltip][data-flow^='down']::before,
+[data-tooltip][data-flow^='down']::after {
+  left: 50%;
+  transform: translate(-50%, 0.5em);
+}
+
+/* data-flow: LEFT */
+[data-tooltip][data-flow^='left']::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #fd5872;
+  left: calc(0em - 5px);
+  transform: translate(-0.5em, -50%);
+}
+[data-tooltip][data-flow^='left']::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-0.5em, -50%);
+}
+
+/* data-flow: RIGHT */
+[data-tooltip][data-flow^='right']::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #fd5872;
+  right: calc(0em - 5px);
+  transform: translate(0.5em, -50%);
+}
+[data-tooltip][data-flow^='right']::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(0.5em, -50%);
+}
+
+/* KEYFRAMES */
+@keyframes data-tooltips-vert {
+  to {
+    opacity: 0.9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes data-tooltips-horz {
+  to {
+    opacity: 0.9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */
+[data-tooltip]:not([data-flow]):hover::before,
+[data-tooltip]:not([data-flow]):hover::after,
+[data-tooltip][data-flow^='up']:hover::before,
+[data-tooltip][data-flow^='up']:hover::after,
+[data-tooltip][data-flow^='down']:hover::before,
+[data-tooltip][data-flow^='down']:hover::after {
+  animation: data-tooltips-vert 300ms ease-out forwards;
+}
+
+[data-tooltip][data-flow^='left']:hover::before,
+[data-tooltip][data-flow^='left']:hover::after,
+[data-tooltip][data-flow^='right']:hover::before,
+[data-tooltip][data-flow^='right']:hover::after {
+  animation: data-tooltips-horz 300ms ease-out forwards;
 }
 
 @media only screen and (min-width: 961px) {
