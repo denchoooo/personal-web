@@ -3,8 +3,6 @@ import './Home.css';
 import logo from '../../resources/svgs/logo.svg';
 
 class Home extends Component {
-  componentDidMount() {}
-
   render() {
     return (
       <div className="container-home">

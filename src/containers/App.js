@@ -14,6 +14,7 @@ import Footer from '../components/Footer/Footer';
 import About from '../containers/About/About';
 import Works from '../containers/Works/Works';
 import Blog from '../containers/Blog/Blog';
+import NewBlog from '../containers/NewBlog/NewBlog';
 
 class App extends Component {
   render() {
@@ -26,7 +27,7 @@ class App extends Component {
               <Route exact path="/about" component={About} />
               <Route exact path="/works" component={Works} />
               <Route exact path="/contact" component={Works} />
-              <Route path="/blog/:id?" component={Blog} />
+              <Route path="/blog/:slug?" component={NewBlog} />
               <Route exact path="/" component={Home} />
               <Redirect to="/" />
             </Switch>

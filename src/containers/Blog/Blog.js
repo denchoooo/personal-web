@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import http from '../../services/http';
+
+import client from '../../services/client';
 import Filter from '../../components/Filter/Filter';
 import BlogList from '../../components/BlogList/BlogList';
 import BlogView from '../../components/BlogView/BlogView';
@@ -11,7 +11,8 @@ class Blog extends Component {
     super(props);
 
     this.state = {
-      width: 0
+      width: 0,
+      posts: []
     };
   }
 
@@ -19,15 +20,14 @@ class Blog extends Component {
     this.updateWidth();
     window.addEventListener('resize', this.updateWidth);
 
-    http.get(
-      '/posts',
-      res => {
-        console.log(res);
-      },
-      err => {
-        console.log(err);
-      }
-    );
+    client
+      .getEntries({
+        content_type: process.env.REACT_APP_POST_CONTENT_TYPE_ID
+      })
+      .then(res => {
+        this.setState({ posts: res.items });
+      })
+      .catch(console.error);
   }
 
   componentWillUnmount() {
@@ -38,10 +38,20 @@ class Blog extends Component {
     this.setState({ width: window.innerWidth });
   };
 
-  render() {
-    const { id } = this.props.match.params;
+  selectPost = slug => {
+    const { posts } = this.state;
+    const filtered = posts.filter(post => post.fields.slug === slug);
+    console.log('filtered', filtered);
+    if (filtered.length <= 0) {
+      return null;
+    }
+    return filtered[0];
+  };
 
-    if (id) {
+  render() {
+    const { slug } = this.props.match.params;
+
+    if (slug) {
       return (
         <div className="blog-page-container">
           {this.state.width > 1040 && (
@@ -49,12 +59,14 @@ class Blog extends Component {
               <div className="blog-filter">
                 <Filter />
               </div>
-              <BlogList />
+              <BlogList posts={this.state.posts} />
               <div className="tr-footer" />
             </div>
           )}
           <div className="vertical-line" />
-          <div className="blog-right">{<div id="test">heyy</div>}</div>
+          <div className="blog-right">
+            <BlogView slug={slug} post={this.selectPost(slug)} />
+          </div>
         </div>
       );
     }
@@ -65,7 +77,7 @@ class Blog extends Component {
           <div className="blog-filter">
             <Filter />
           </div>
-          <BlogList />
+          <BlogList posts={this.state.posts} />
           <div className="tr-footer" />
         </div>
         <div className="vertical-line" />
