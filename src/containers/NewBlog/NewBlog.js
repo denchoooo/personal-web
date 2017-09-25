@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import moment from 'moment';
 import marked from 'marked';
 
 import client from '../../services/client';
@@ -15,6 +14,21 @@ class NewBlog extends Component {
       posts: []
     };
   }
+
+  static months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
 
   componentDidMount() {
     marked.setOptions({
@@ -51,7 +65,8 @@ class NewBlog extends Component {
     }
 
     return posts.map(post => {
-      console.log(post);
+      const date = new Date(post.fields.date);
+
       return (
         <div
           key={post.sys.id}
@@ -59,7 +74,9 @@ class NewBlog extends Component {
         >
           <div className="blog-header">
             <div className="b-date smooth-transition b-date-open">
-              <p>{moment(post.fields.date).format('MMMM, DD, YYYY')}</p>
+              <p>{`${NewBlog.months[
+                date.getMonth()
+              ]} ${date.getDate()}, ${date.getFullYear()}`}</p>
             </div>
             <div className="b-title smooth-transition b-title-open">
               {post.fields.title}

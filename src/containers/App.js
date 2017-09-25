@@ -13,7 +13,6 @@ import Home from './Home/Home';
 import Footer from '../components/Footer/Footer';
 import About from '../containers/About/About';
 import Works from '../containers/Works/Works';
-import Blog from '../containers/Blog/Blog';
 import NewBlog from '../containers/NewBlog/NewBlog';
 
 class App extends Component {
