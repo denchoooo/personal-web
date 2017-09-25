@@ -21,25 +21,40 @@ class NewBlog extends Component {
   }
 
   componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyNav);
+
     this.getQuote();
 
-    setTimeout(
-      client
-        .getEntries({
-          content_type: process.env.REACT_APP_POST_CONTENT_TYPE_ID
-        })
-        .then(res => {
-          this.setState({
-            posts: res.items.map(item => {
-              return { ...item, title: item.fields.title };
-            }),
-            filteredPost: res.items
-          });
-        })
-        .catch(console.error),
-      300
-    );
+    client
+      .getEntries({
+        content_type: process.env.REACT_APP_POST_CONTENT_TYPE_ID
+      })
+      .then(res => {
+        this.setState({
+          posts: res.items.map(item => {
+            return { ...item, title: item.fields.title };
+          }),
+          filteredPost: res.items
+        });
+      })
+      .catch(console.error);
   }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyNav);
+  }
+
+  handleKeyNav = e => {
+    const { history } = this.props;
+
+    if (e.keyCode === 39) {
+      history.push('/');
+    }
+
+    if (e.keyCode === 37) {
+      history.push('/contact');
+    }
+  };
 
   getQuote = () => {
     return quotes[Math.floor(Math.random() * quotes.length)];

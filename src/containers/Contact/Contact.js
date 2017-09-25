@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import './Works.css';
-
-class Works extends Component {
+class Contact extends Component {
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyNav);
   }
@@ -12,11 +10,11 @@ class Works extends Component {
     const { history } = this.props;
 
     if (e.keyCode === 39) {
-      history.push('/contact');
+      history.push('/blog');
     }
 
     if (e.keyCode === 37) {
-      history.push('/about');
+      history.push('/works');
     }
   };
 
@@ -36,4 +34,4 @@ class Works extends Component {
   }
 }
 
-export default Works;
+export default Contact;

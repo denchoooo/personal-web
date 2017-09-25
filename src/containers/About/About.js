@@ -6,6 +6,8 @@ import WhatBtn from '../../components/WhatBtn/WhatBtn';
 
 class AboutGrid extends Component {
   componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyNav);
+
     // Removing all the flex container if CSS-Grid is supported
     if (CSS.supports('display', 'grid')) {
       const allNogrids = document.querySelectorAll('.nogrid');
@@ -18,6 +20,22 @@ class AboutGrid extends Component {
       });
     }
   }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyNav);
+  }
+
+  handleKeyNav = e => {
+    const { history } = this.props;
+
+    if (e.keyCode === 39) {
+      history.push('/works');
+    }
+
+    if (e.keyCode === 37) {
+      history.push('/home');
+    }
+  };
 
   render() {
     return (

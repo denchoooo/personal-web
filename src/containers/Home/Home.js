@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
-import { CSSTransitionGroup } from 'react-transition-group';
 
 import './Home.css';
 import logo from '../../resources/svgs/logo.svg';
 
 class Home extends Component {
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyNav);
+  }
+
+  handleKeyNav = e => {
+    const { history } = this.props;
+
+    if (e.keyCode === 39) {
+      history.push('/about');
+    }
+
+    if (e.keyCode === 37) {
+      history.push('/blog');
+    }
+  };
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyNav);
+  }
+
   render() {
     return (
       <div className="container-home animated fadeIn">
