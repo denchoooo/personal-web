@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
+import mockPic from '../../resources/images/PostMock1.jpg';
+import '../NewBlog/NewBlog.css';
+import '../NewBlog/Markdown.css';
 import './Works.css';
 
 class Works extends Component {
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyNav);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyNav);
   }
 
   handleKeyNav = e => {
@@ -20,17 +26,95 @@ class Works extends Component {
     }
   };
 
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyNav);
-  }
+  handleClick = () => {
+    const { history } = this.props;
+
+    history.push('/blog/every-javascript-framework');
+  };
+
   render() {
     return (
-      <div className="container-works">
-        <h1 className="wip-text">
-          Aww.. I'm still building this :(
-          <br />
-          Get back to <Link to="/">home</Link> instead
-        </h1>
+      <div className="works-outer animated slideInRight">
+        <div className="page-title smooth-transition">Works</div>
+        <div className="works-subtitle-box smooth-transition">
+          <div className="works-sub smooth-transition">Larger Works</div>
+          <div className="works-line" />
+        </div>
+        <div className="works-grid smooth-transition">
+          <div className="works-inner">
+            <div
+              className="works-box smooth-transition"
+              onClick={this.handleClick}
+            >
+              <img className="works-pic" src={mockPic} alt="works1" />
+              <div className="works-desc">
+                <div className="works-text">
+                  Synchrome is a web-based administration app that manages
+                  employees, used in one of the government in Indonesia. It is
+                  created with advanced ReactJS and Redux.
+                </div>
+              </div>
+            </div>
+            <div className="works-box smooth-transition">
+              <img className="works-pic" src={mockPic} alt="works1" />
+              <div className="works-desc">
+                <div className="works-text">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem.
+                </div>
+              </div>
+            </div>
+            <div className="works-box smooth-transition">
+              <img className="works-pic" src={mockPic} alt="works1" />
+              <div className="works-desc">
+                <div className="works-text">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="works-subtitle-box smooth-transition">
+          <div className="works-sub smooth-transition">Smaller Works</div>
+          <div className="works-line" />
+        </div>
+        <div className="works-grid smooth-transition">
+          <div className="works-inner">
+            <div className="works-box smooth-transition">
+              <img className="works-pic" src={mockPic} alt="works1" />
+              <div className="works-desc">
+                <div className="works-text">
+                  Synchrome is a web-based administration app that manages
+                  employees, used in one of the government in Indonesia. It is
+                  created with advanced ReactJS and Redux.
+                </div>
+              </div>
+            </div>
+            <div className="works-box smooth-transition">
+              <img className="works-pic" src={mockPic} alt="works1" />
+              <div className="works-desc">
+                <div className="works-text">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem.
+                </div>
+              </div>
+            </div>
+            <div className="works-box smooth-transition">
+              <img className="works-pic" src={mockPic} alt="works1" />
+              <div className="works-desc">
+                <div className="works-text">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

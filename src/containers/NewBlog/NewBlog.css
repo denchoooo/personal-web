@@ -8,6 +8,68 @@
   padding-bottom: 37px;
   overflow: hidden;
 }
+.filter-container {
+  display: flex;
+  width: 240px;
+  height: 25px;
+  border-bottom: 1px solid #7b7b7b;
+}
+
+.filter-input {
+  border: none;
+  width: 215px;
+  background-color: #fcfafe;
+  color: #7b7b7b;
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.filter-input:focus {
+  border: none;
+  outline: none;
+}
+
+.filter-clear {
+  width: 25px;
+  height: 25px;
+  cursor: auto;
+  transition: all 0.15s linear;
+}
+
+.filter-clear:active {
+  background: none;
+}
+
+.clear-cross {
+  position: relative;
+  top: 9px;
+  width: 17px;
+  border-bottom: 1px solid #7b7b7b;
+  transform: rotate(45deg);
+}
+
+.clear-cross:last-of-type {
+  top: 8px;
+  transform: rotate(-45deg);
+}
+
+@media only screen and (min-width: 769px) {
+  .filter-input {
+    font-size: 22px;
+  }
+
+  .filter-container {
+    height: 33px;
+  }
+
+  .filter-clear {
+    position: relative;
+    top: 7px;
+  }
+}
 
 .newblog-container {
   flex: 1;

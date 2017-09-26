@@ -84,10 +84,6 @@
   color: #fd5872;
 }
 
-.about-heading {
-  font-size: 24px;
-}
-
 .about-text {
   margin: 5px 0 15px 0;
 }
@@ -203,7 +199,7 @@
 
   .about-me {
     display: grid;
-    grid-template-columns: auto 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'title line line' 'pic pic pic' 'text text text';
   }
 
@@ -245,7 +241,7 @@
     }
 
     .about-me {
-      grid-template-columns: 170px 1fr 1fr;
+      grid-template-columns: 239px 1fr 1fr;
       grid-template-areas: 'title line line' 'empty pic pic' 'empty2 text text';
     }
 
@@ -256,16 +252,22 @@
     }
   }
 
+  .about-icons,
+  .icons-webdesign {
+    font-size: 2em;
+  }
+
+  .about-subtitle {
+    font-size: 16px;
+  }
+
   .about-heading {
-    font-size: 32px;
+    font-size: 48px;
   }
 
   .about-title,
   .title-aboutme {
     text-align: right;
-  }
-  .about-heading {
-    font-size: 32px;
   }
 
   .about-title,

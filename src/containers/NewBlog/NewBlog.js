@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 import BlogBox from './BlogBox';
 import client from '../../services/client';
-import Filter from '../../components/Filter/Filter';
 import quotes from '../../quotes';
 import './NewBlog.css';
 import './Markdown.css';
@@ -22,6 +20,7 @@ class NewBlog extends Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyNav);
+    const { params } = this.props.match;
 
     this.getQuote();
 
@@ -31,13 +30,15 @@ class NewBlog extends Component {
       })
       .then(res => {
         this.setState({
-          posts: res.items.map(item => {
-            return { ...item, title: item.fields.title };
-          }),
+          posts: res.items,
           filteredPost: res.items
         });
       })
       .catch(console.error);
+
+    if (params.slug) {
+      this.setState({ filter: params.slug.split('-').join(' ') });
+    }
   }
 
   componentWillUnmount() {
@@ -61,10 +62,33 @@ class NewBlog extends Component {
   };
 
   filterPost = () => {
+    const filter = this.state.filter.toLowerCase();
+
     return this.state.posts.filter(post => {
-      return (
-        post.title.toLowerCase().indexOf(this.state.filter.toLowerCase()) !== -1
-      );
+      const date = new Date(post.fields.date);
+
+      if (post.fields.title.toLowerCase().indexOf(filter) !== -1) {
+        return true;
+      }
+
+      if (
+        post.fields.tags
+          .join(' ')
+          .toLowerCase()
+          .indexOf(filter) !== -1
+      ) {
+        return true;
+      }
+
+      const formattedDate = `${BlogBox.months[
+        date.getMonth()
+      ]} ${date.getDate()}, ${date.getFullYear()}`.toLowerCase();
+
+      if (formattedDate.indexOf(filter) !== -1) {
+        return true;
+      }
+
+      return false;
     });
   };
 
@@ -75,7 +99,7 @@ class NewBlog extends Component {
     if (posts.length <= 0) {
       return (
         <div className="blog-box smooth-transition not-found">
-          Fetching data...
+          Fetching posts...
           <div className={'b-featured-box'}>
             <img
               className={`b-featured-img smooth-transition`}
@@ -89,7 +113,7 @@ class NewBlog extends Component {
 
     if (filtered <= 0) {
       return (
-        <div className="blog-box smooth-transition not-found">
+        <div className="blog-box smooth-transition not-found animated slideInDown">
           Nothing found...
           <div className={'b-featured-box'}>
             <img
@@ -119,6 +143,7 @@ class NewBlog extends Component {
   };
 
   render() {
+    console.log(this.state);
     return (
       <div className="newblog-outer">
         <div className="newblog-left animated slideInUp">
@@ -151,11 +176,7 @@ class NewBlog extends Component {
             </div>
           </div>
         </div>
-        <div
-          className="newblog-container animated slideInDown"
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
-        >
+        <div className="newblog-container animated slideInDown">
           {this.renderPostList()}
         </div>
       </div>
