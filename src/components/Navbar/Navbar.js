@@ -71,7 +71,7 @@ class Navbar extends Component {
                   className="fa fa-github"
                 />
                 <SocialIcon
-                  to="https://github.com/denichodev"
+                  to="http://linkedin.com/in/deni-cho-830915144"
                   className="fa fa-linkedin"
                 />
                 <SocialIcon

@@ -8,6 +8,7 @@
   padding-bottom: 37px;
   overflow: hidden;
 }
+
 .filter-container {
   display: flex;
   width: 240px;
@@ -357,6 +358,10 @@
   .b-filter {
     display: flex;
     justify-content: flex-end;
+  }
+
+  .casdf {
+    margin-bottom: 25px;
   }
 
   .img-caption {

@@ -14,12 +14,17 @@ class NewBlog extends Component {
       posts: [],
       filter: '',
       filteredPost: [],
-      quote: this.getQuote()
+      quote: this.getQuote(),
+      width: 0
     };
   }
 
   componentDidMount() {
+    this.handleResize();
+
     document.addEventListener('keydown', this.handleKeyNav);
+    window.addEventListener('resize', this.handleResize);
+
     const { params } = this.props.match;
 
     this.getQuote();
@@ -43,7 +48,12 @@ class NewBlog extends Component {
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyNav);
+    window.removeEventListener('resize', this.handleResize);
   }
+
+  handleResize = () => {
+    this.setState({ width: window.innerWidth });
+  };
 
   handleKeyNav = e => {
     const { history } = this.props;
@@ -143,7 +153,6 @@ class NewBlog extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <div className="newblog-outer">
         <div className="newblog-left animated slideInUp">
@@ -177,6 +186,33 @@ class NewBlog extends Component {
           </div>
         </div>
         <div className="newblog-container animated slideInDown">
+          <div
+            style={{
+              display: this.state.width >= 1080 ? 'none' : 'block',
+              marginBottom: '25px'
+            }}
+          >
+            <div className="filter-container">
+              <input
+                value={this.state.filter}
+                onChange={this.handleFilterChange}
+                type="text"
+                className="filter-input"
+                placeholder="Filter..."
+              />
+              <div
+                className="filter-clear"
+                onClick={this.handleFilterClear}
+                style={{
+                  opacity: this.state.filter ? 1 : 0,
+                  cursor: this.state.filter ? 'pointer' : 'auto'
+                }}
+              >
+                <div className="clear-cross" />
+                <div className="clear-cross" />
+              </div>
+            </div>
+          </div>
           {this.renderPostList()}
         </div>
       </div>

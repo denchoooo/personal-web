@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import mockPic from '../../resources/images/PostMock1.jpg';
+import mockPic2 from '../../resources/images/compute.png';
 import '../NewBlog/NewBlog.css';
 import '../NewBlog/Markdown.css';
 import './Works.css';
@@ -56,7 +57,7 @@ class Works extends Component {
               </div>
             </div>
             <div className="works-box smooth-transition">
-              <img className="works-pic" src={mockPic} alt="works1" />
+              <img className="works-pic" src={mockPic2} alt="works1" />
               <div className="works-desc">
                 <div className="works-text">
                   It is a long established fact that a reader will be distracted
@@ -84,7 +85,7 @@ class Works extends Component {
         <div className="works-grid smooth-transition">
           <div className="works-inner">
             <div className="works-box smooth-transition">
-              <img className="works-pic" src={mockPic} alt="works1" />
+              <img className="works-pic" src={mockPic2} alt="works1" />
               <div className="works-desc">
                 <div className="works-text">
                   Synchrome is a web-based administration app that manages
@@ -104,7 +105,7 @@ class Works extends Component {
               </div>
             </div>
             <div className="works-box smooth-transition">
-              <img className="works-pic" src={mockPic} alt="works1" />
+              <img className="works-pic" src={mockPic2} alt="works1" />
               <div className="works-desc">
                 <div className="works-text">
                   It is a long established fact that a reader will be distracted

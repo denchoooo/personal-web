@@ -6,15 +6,19 @@
     "animated": "^0.2.0",
     "axios": "^0.16.2",
     "contentful": "^4.6.2",
+    "contentful-management": "^3.12.0",
     "font-awesome": "^4.7.0",
+    "google-map-react": "^0.24.0",
     "husky": "^0.14.3",
     "marked": "^0.3.6",
     "match-sorter": "^2.0.2",
     "mdi": "^2.0.46",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-ga": "^2.3.3",
     "react-router-dom": "^4.1.2",
-    "react-transition-group": "1.x"
+    "react-transition-group": "1.x",
+    "recompose": "^0.25.0"
   },
   "devDependencies": {
     "@storybook/react": "^3.1.9",
