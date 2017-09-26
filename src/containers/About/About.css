@@ -67,6 +67,21 @@
   margin: 10px 0 10px 0;
 }
 
+.ps-svg {
+  position: relative;
+  top: 2px;
+  right: 6px;
+  width: 31px;
+  height: 28px;
+}
+
+.sketch-svg {
+  position: relative;
+  right: 5px;
+  width: 35px;
+  height: 32px;
+}
+
 .about-what-btn {
   font-family: 'Raleway';
   font-size: 14px;
@@ -132,13 +147,8 @@
   margin-top: 3px;
 }
 
-.pic-aboutme {
-  display: flex;
-  justify-content: center;
-}
-
 .text-aboutme {
-  margin-top: 20px;
+  margin-top: 10px;
   font-family: 'Raleway';
   font-size: 14px;
   line-height: 24px;
@@ -152,23 +162,18 @@
       'icons icons icons' 'text text text' 'subtitle-wd subtitle-wd whatbtn-wd'
       'icons-wd icons-wd icons-wd' 'text-wd text-wd text-wd';
   }
-
   .about-title {
     grid-area: title;
   }
-
   .about-line {
     grid-area: line;
   }
-
   .about-subtitle {
     grid-area: subtitle;
   }
-
   .about-what-btn {
     grid-area: whatbtn;
   }
-
   .about-icons {
     grid-area: icons;
     display: flex;
@@ -176,45 +181,35 @@
     font-size: 1.5em;
     color: #fd5872;
   }
-
   .about-text {
     grid-area: text;
   }
-
   .subtitle-webdesign {
     grid-area: subtitle-wd;
   }
-
   .whatbtn-webdesign {
     grid-area: whatbtn-wd;
   }
-
   .icons-webdesign {
     grid-area: icons-wd;
   }
-
   .text-webdesign {
     grid-area: text-wd;
   }
-
   .about-me {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr;
     grid-template-areas: 'title line line' 'pic pic pic' 'text text text';
   }
-
   .title-aboutme {
     grid-area: title;
   }
-
   .line-aboutme {
     grid-area: line;
   }
-
   .pic-aboutme {
     grid-area: pic;
   }
-
   .text-aboutme {
     grid-area: text;
   }
@@ -225,10 +220,21 @@
     .content-wrapper {
       overflow-y: auto;
     }
-
     .container-about {
       overflow-y: visible;
     }
+  }
+  .ps-svg {
+    position: relative;
+    left: 2px;
+    width: 35px;
+    height: 32px;
+  }
+  .sketch-svg {
+    position: relative;
+    left: 7px;
+    width: 45px;
+    height: 42px;
   }
 }
 
@@ -239,53 +245,43 @@
         'icons text text' 'empty2 subtitle-wd whatbtn-wd'
         'icons-wd text-wd text-wd';
     }
-
     .about-me {
       grid-template-columns: 239px 1fr 1fr;
       grid-template-areas: 'title line line' 'empty pic pic' 'empty2 text text';
     }
-
     .about-icons,
     .icons-webdesign {
       flex-direction: column;
       align-items: flex-end;
     }
   }
-
   .about-icons,
   .icons-webdesign {
     font-size: 2em;
   }
-
   .about-subtitle {
     font-size: 16px;
   }
-
   .about-heading {
     font-size: 48px;
   }
-
   .about-title,
   .title-aboutme {
     text-align: right;
   }
-
   .about-title,
   .title-aboutme {
     text-align: right;
   }
-
   .about-text,
   .text-webdesign,
   .text-aboutme {
     margin-left: 10px;
   }
-
   .about-subtitle,
   .subtitle-webdesign {
     margin-left: 10px;
   }
-
   .tr-footer {
     height: calc(25px);
   }

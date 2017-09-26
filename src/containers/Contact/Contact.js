@@ -215,8 +215,8 @@ class Contact extends Component {
           <div className="contact-left animated slideInLeft">
             <div className="page-title">Contact</div>
             <div className="contact-subtitle">
-              Whether you want to invite me to work or to have a nice little
-              chit-chat.
+              Whether you want to invite me to work, giving feedbacks, or to
+              have a nice little chit-chat.
             </div>
             <div className="form-container">
               <form action="">
