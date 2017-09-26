@@ -84,6 +84,16 @@
   flex-direction: column;
 }
 
+.works-title {
+  font-family: 'PatuaOne-Regular';
+  color: #fcfafe;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #fcfafe;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
 .works-text {
   align-self: center;
   color: #fcfafe;
@@ -103,6 +113,14 @@
   .works-text {
     font-size: 13px;
     line-height: 20px;
+  }
+
+  .works-title {
+    font-size: 24px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #fcfafe;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
   }
 }
 

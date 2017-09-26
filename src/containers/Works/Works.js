@@ -49,6 +49,7 @@ class Works extends Component {
             >
               <img className="works-pic" src={mockPic} alt="works1" />
               <div className="works-desc">
+                <div className="works-title">Synchrome</div>
                 <div className="works-text">
                   Synchrome is a web-based administration app that manages
                   employees, used in one of the government in Indonesia. It is
@@ -59,6 +60,7 @@ class Works extends Component {
             <div className="works-box smooth-transition">
               <img className="works-pic" src={mockPic2} alt="works1" />
               <div className="works-desc">
+                <div className="works-title">Synchrome</div>
                 <div className="works-text">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
@@ -69,6 +71,7 @@ class Works extends Component {
             <div className="works-box smooth-transition">
               <img className="works-pic" src={mockPic} alt="works1" />
               <div className="works-desc">
+                <div className="works-title">Synchrome</div>
                 <div className="works-text">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
@@ -87,6 +90,7 @@ class Works extends Component {
             <div className="works-box smooth-transition">
               <img className="works-pic" src={mockPic2} alt="works1" />
               <div className="works-desc">
+                <div className="works-title">Synchrome</div>
                 <div className="works-text">
                   Synchrome is a web-based administration app that manages
                   employees, used in one of the government in Indonesia. It is
@@ -97,6 +101,7 @@ class Works extends Component {
             <div className="works-box smooth-transition">
               <img className="works-pic" src={mockPic} alt="works1" />
               <div className="works-desc">
+                <div className="works-title">Synchrome</div>
                 <div className="works-text">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
@@ -107,6 +112,7 @@ class Works extends Component {
             <div className="works-box smooth-transition">
               <img className="works-pic" src={mockPic2} alt="works1" />
               <div className="works-desc">
+                <div className="works-title">Synchrome</div>
                 <div className="works-text">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
