@@ -37,9 +37,6 @@ class Home extends Component {
           <div className="home-text-line line" />
           <h2 className="home-subtext">
             Front End Developer / Web Designer <br />
-            <span className="notice">
-              <i>This website is under development</i>
-            </span>
           </h2>
         </div>
       </div>

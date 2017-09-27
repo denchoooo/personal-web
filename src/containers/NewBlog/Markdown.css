@@ -164,6 +164,9 @@
 
 .markdown-body img {
   border-style: none;
+  display: block;
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 .markdown-body svg:not(:root) {
@@ -208,8 +211,8 @@
 }
 
 .markdown-body a {
-  color: #fd5872;
-  text-decoration: none;
+  color: #07d3bc;
+  text-decoration: underline;
 }
 
 .markdown-body a:hover {
@@ -426,7 +429,7 @@
   font-weight: lighter;
   font-size: 1.2em;
   padding: 0 1em;
-  color: #07d3bc;
+  color: #fd5872;
 }
 
 .markdown-body blockquote > :first-child {

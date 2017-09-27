@@ -114,7 +114,7 @@ class BlogBox extends Component {
             src={post.fields.featuredImage.fields.file.url}
             alt="Post"
           />
-          <p className="img-caption">This does not compute (credit: pixabay)</p>
+          <p className="img-caption">{post.fields.imageDescription}</p>
         </div>
         <div
           className={`blog-main markdown-body ${this.state.isOpen

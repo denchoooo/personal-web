@@ -104,6 +104,7 @@ class NewBlog extends Component {
 
   renderPostList = () => {
     const { posts } = this.state;
+    console.log(posts);
     const filtered = this.filterPost(posts);
 
     if (posts.length <= 0) {
