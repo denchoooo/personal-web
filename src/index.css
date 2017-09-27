@@ -70,11 +70,6 @@ strong {
   text-align: center;
 }
 
-::-webkit-scrollbar {
-  width: 0px; /* remove scrollbar space */
-  background: transparent; /* optional: just make scrollbar invisible */
-}
-
 /* START data-tooltip STYLES */
 [data-tooltip] {
   position: relative; /* opinion 1 */

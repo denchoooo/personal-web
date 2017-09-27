@@ -28,7 +28,7 @@ class Home extends Component {
     return (
       <div className="container-home animated fadeIn">
         <img className="logo-big" src={logo} alt="Logo Big" />
-        <div className="text-area animated slideInRight">
+        <div className="text-area animated fadeIn">
           <h1 className="home-text heading4">
             Hello,<br />I’m <span className="text-primary">Deni</span>{' '}
             <span className="text-secondary">Cho</span>,

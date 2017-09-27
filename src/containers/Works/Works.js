@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 
-import mockPic from '../../resources/images/PostMock1.jpg';
-import mockPic2 from '../../resources/images/compute.png';
-import worksPersonal from '../../resources/images/works-personal.jpg';
 import '../NewBlog/NewBlog.css';
 import '../NewBlog/Markdown.css';
 import './Works.css';
+
+import worksSynchrome from '../../resources/images/works-synchrome.png';
+import worksPersonal from '../../resources/images/works-personal.jpg';
+
+import worksGithub from '../../resources/images/sp-github.jpg';
+import worksQuote from '../../resources/images/sp-quote.jpg';
+import worksWiki from '../../resources/images/sp-wiki.jpg';
 
 class Works extends Component {
   componentDidMount() {
@@ -28,12 +32,6 @@ class Works extends Component {
     }
   };
 
-  handleClick = () => {
-    const { history } = this.props;
-
-    history.push('/blog/every-javascript-framework');
-  };
-
   linkToFilter = target => {
     const { history } = this.props;
 
@@ -42,7 +40,7 @@ class Works extends Component {
 
   render() {
     return (
-      <div className="works-outer animated slideInRight">
+      <div className="works-outer animated fadeIn">
         <div className="page-title smooth-transition">Works</div>
         <div className="works-subtitle-box smooth-transition">
           <div className="works-sub smooth-transition">Larger Works</div>
@@ -52,11 +50,19 @@ class Works extends Component {
           <div className="works-inner">
             <div
               className="works-box smooth-transition"
-              onClick={this.handleClick}
+              onClick={() => {
+                this.linkToFilter('/synchrome');
+              }}
             >
-              <img className="works-pic" src={mockPic} alt="works1" />
+              <img className="works-pic" src={worksSynchrome} alt="Synchrome" />
               <div className="works-desc">
-                <div className="works-title">Synchrome</div>
+                <div className="works-title">
+                  Synchrome
+                  <i className="mdi mdi-react works-icon" />
+                  <i className="mdi mdi-language-javascript works-icon" />
+                  <i className="mdi mdi-language-css3 works-icon" />
+                  <i className="mdi mdi-language-html5 works-icon" />
+                </div>
                 <div className="works-text">
                   Synchrome is a web-based administration app that manages
                   employees, used in one of the government in Indonesia. It is
@@ -70,7 +76,11 @@ class Works extends Component {
                 this.linkToFilter('/personal-website');
               }}
             >
-              <img className="works-pic" src={worksPersonal} alt="works1" />
+              <img
+                className="works-pic"
+                src={worksPersonal}
+                alt="Personal Website"
+              />
               <div className="works-desc">
                 <div className="works-title">
                   Personal Website
@@ -98,38 +108,85 @@ class Works extends Component {
         <div className="works-grid smooth-transition">
           <div className="works-inner">
             <div className="works-box smooth-transition">
-              <img className="works-pic" src={worksPersonal} alt="works1" />
-              <div className="works-desc">
-                <div className="works-title">Personal Website</div>
-                <div className="works-text">
-                  Yes, I consider my personal website as on of my large
-                  projects, it gaves me a lot to learn, and still one of my
-                  proudest product. Click me to read more about my personal
-                  website.
+              <a
+                href="https://github.com/denichodev/github-battle"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="works-pic"
+                  src={worksGithub}
+                  alt="Github Battle"
+                />
+                <div className="works-desc">
+                  <div className="works-title">
+                    Github Battle
+                    <i className="mdi mdi-react works-icon" />
+                    <i className="mdi mdi-language-javascript works-icon" />
+                    <i className="mdi mdi-language-css3 works-icon" />
+                    <i className="mdi mdi-language-html5 works-icon" />
+                  </div>
+                  <div className="works-text">
+                    One of the project I've done with React fundamentals
+                    tutorial by Tyler McGinnis. One of the reasons why I can use
+                    React right now. This project is so useful, even I use this
+                    sometimes to check on popular repos.
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div className="works-box smooth-transition">
-              <img className="works-pic" src={mockPic} alt="works1" />
-              <div className="works-desc">
-                <div className="works-title">Synchrome</div>
-                <div className="works-text">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem.
+              <a
+                href="https://codepen.io/denicho/pen/MpYREQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="works-pic"
+                  src={worksQuote}
+                  alt="Random Quote"
+                />
+                <div className="works-desc">
+                  <div className="works-title">
+                    Quote Machine
+                    <i className="mdi mdi-language-javascript works-icon" />
+                    <i className="mdi mdi-language-css3 works-icon" />
+                    <i className="mdi mdi-language-html5 works-icon" />
+                  </div>
+                  <div className="works-text">
+                    Also one of the old project on freeCodeCamp. Not very
+                    relevant now, since I am now currently more skilled. Also I
+                    like on how much effort I put to make this looks nice at
+                    least.
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div className="works-box smooth-transition">
-              <img className="works-pic" src={mockPic2} alt="works1" />
-              <div className="works-desc">
-                <div className="works-title">Synchrome</div>
-                <div className="works-text">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem.
+              <a
+                href="https://codepen.io/denicho/pen/gmMddB"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="works-pic"
+                  src={worksWiki}
+                  alt="Wiki Searcher"
+                />
+                <div className="works-desc">
+                  <div className="works-title">
+                    Wiki Search
+                    <i className="mdi mdi-language-javascript works-icon" />
+                    <i className="mdi mdi-language-css3 works-icon" />
+                    <i className="mdi mdi-language-html5 works-icon" />
+                  </div>
+                  <div className="works-text">
+                    It is one of the oldest project I have ever done. One of the
+                    personal project on freeCodeCamp, not very much to be proud
+                    of nowadays, yet it still looks nice.
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

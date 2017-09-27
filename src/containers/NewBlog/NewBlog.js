@@ -124,7 +124,7 @@ class NewBlog extends Component {
 
     if (filtered <= 0) {
       return (
-        <div className="blog-box smooth-transition not-found animated slideInDown">
+        <div className="blog-box smooth-transition not-found animated fadeIn">
           Nothing found...
           <div className={'b-featured-box'}>
             <img
@@ -156,7 +156,7 @@ class NewBlog extends Component {
   render() {
     return (
       <div className="newblog-outer">
-        <div className="newblog-left animated slideInUp">
+        <div className="newblog-left animated fadeIn">
           <div className="page-decor smooth-transition">Blog</div>
           <div className="b-filter ">
             <div className="filter-container">
@@ -186,7 +186,7 @@ class NewBlog extends Component {
             </div>
           </div>
         </div>
-        <div className="newblog-container animated slideInDown">
+        <div className="newblog-container animated fadeIn">
           <div
             style={{
               display: this.state.width >= 1080 ? 'none' : 'block',

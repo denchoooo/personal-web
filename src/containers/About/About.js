@@ -42,7 +42,7 @@ class AboutGrid extends Component {
 
   render() {
     return (
-      <div className="container-about animated slideInUp">
+      <div className="container-about animated fadeIn">
         <div className="about-thingsido">
           <div className="nogrid n-row1">
             <div className="about-title">
@@ -125,7 +125,8 @@ class AboutGrid extends Component {
             <FlipCard id="web-design">
               <div className="flipcard-front">
                 Web Designing is a mixture of science and art. I am confident
-                that I have a keen eye on design. I design the most of the
+                that I have a keen eye for design, yet I still have to learn
+                more applying it to a web design. I design the most of the
                 structures and layouts first before the actual development on
                 the front end begin, with the process of iterations comes later
                 in development.
@@ -158,9 +159,11 @@ class AboutGrid extends Component {
           <div className="text-aboutme">
             <p>
               My name is <strong>Deni </strong>{' '}
-              <strong className="green">Cho</strong>. I live in Indonesia, and
-              currently a university student in Universitas Atma Jaya Yogyakarta
-              learning Informatics Engineering.
+              <strong className="green">Cho</strong>. I am an{' '}
+              <strong>ambitious learner</strong> and have a{' '}
+              <strong>huge passion</strong> in web development. I live in
+              Indonesia, and currently a university student in Universitas Atma
+              Jaya Yogyakarta learning Informatics Engineering.
               <br />
               <br />
               I have been passionate about computer since I was a child, mostly
@@ -174,10 +177,9 @@ class AboutGrid extends Component {
               and it became interesting really quick.
               <br />
               <br />
-              I have been learning web development and design for roughly 8
-              months now. I am an ambitious learner and have a huge passion in
-              web development. I love learning everything and currently
-              accepting more work to hone my skills for even more.
+              I have been learning web development and design for roughly a year
+              now. I love learning everything and currently accepting more work
+              to hone my skills for even more.
             </p>
           </div>
         </div>

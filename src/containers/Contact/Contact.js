@@ -212,7 +212,7 @@ class Contact extends Component {
     return (
       <div className="contact-outer">
         <div className="contact-container">
-          <div className="contact-left animated slideInLeft">
+          <div className="contact-left animated fadeIn">
             <div className="page-title">Contact</div>
             <div className="contact-subtitle">
               Whether you want to invite me to work, giving feedbacks, or to
@@ -294,7 +294,7 @@ class Contact extends Component {
               </span>
             </div>
           </div>
-          <div className="contact-right animated slideInUp">
+          <div className="contact-right animated fadeIn">
             <div className="map-container">
               <GoogleMapReact
                 bootstrapURLKeys={mapConfig}
