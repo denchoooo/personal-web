@@ -135,59 +135,6 @@ class Works extends Component {
                 </div>
               </a>
             </div>
-            <div className="works-box smooth-transition">
-              <a
-                href="https://codepen.io/denicho/pen/MpYREQ"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="works-pic"
-                  src={worksQuote}
-                  alt="Random Quote"
-                />
-                <div className="works-desc">
-                  <div className="works-title">
-                    Quote Machine
-                    <i className="mdi mdi-language-javascript works-icon" />
-                    <i className="mdi mdi-language-css3 works-icon" />
-                    <i className="mdi mdi-language-html5 works-icon" />
-                  </div>
-                  <div className="works-text">
-                    Also one of the old project on freeCodeCamp. Not very
-                    relevant now, since I am now currently more skilled. Also I
-                    like on how much effort I put to make this looks nice at
-                    least.
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="works-box smooth-transition">
-              <a
-                href="https://codepen.io/denicho/pen/gmMddB"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="works-pic"
-                  src={worksWiki}
-                  alt="Wiki Searcher"
-                />
-                <div className="works-desc">
-                  <div className="works-title">
-                    Wiki Search
-                    <i className="mdi mdi-language-javascript works-icon" />
-                    <i className="mdi mdi-language-css3 works-icon" />
-                    <i className="mdi mdi-language-html5 works-icon" />
-                  </div>
-                  <div className="works-text">
-                    It is one of the oldest project I have ever done. One of the
-                    personal project on freeCodeCamp, not very much to be proud
-                    of nowadays, yet it still looks nice.
-                  </div>
-                </div>
-              </a>
-            </div>
           </div>
         </div>
       </div>
