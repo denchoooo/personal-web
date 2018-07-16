@@ -24,6 +24,10 @@ class AboutGrid extends Component {
     }
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyNav);
   }
@@ -161,9 +165,7 @@ class AboutGrid extends Component {
               My name is <strong>Deni </strong>{' '}
               <strong className="green">Cho</strong>. I am an{' '}
               <strong>ambitious learner</strong> and have a{' '}
-              <strong>huge passion</strong> in web development. I live in
-              Indonesia, and currently a university student in Universitas Atma
-              Jaya Yogyakarta learning Informatics Engineering.
+              <strong>huge passion</strong> in web development.
               <br />
               <br />
               I have been passionate about computer since I was a child, mostly

@@ -19,6 +19,10 @@ class NewBlog extends Component {
     };
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount() {
     this.handleResize();
 
@@ -81,12 +85,7 @@ class NewBlog extends Component {
         return true;
       }
 
-      if (
-        post.fields.tags
-          .join(' ')
-          .toLowerCase()
-          .indexOf(filter) !== -1
-      ) {
+      if (post.fields.tags.join(' ').toLowerCase().indexOf(filter) !== -1) {
         return true;
       }
 

@@ -6,9 +6,8 @@ import validate from '../../helpers/validate';
 
 import './Contact.css';
 
-const MapMarker = ({ icon, style }) => (
-  <i className={`fa fa-${icon}`} style={style} />
-);
+const MapMarker = ({ icon, style }) =>
+  <i className={`fa fa-${icon}`} style={style} />;
 
 const mapConfig = {
   key: process.env.REACT_APP_GOOGLE_MAP_API_KEY
@@ -46,6 +45,10 @@ class Contact extends Component {
     this.state = {
       form: defaultFormState
     };
+  }
+
+  componentWillMount() {
+    window.scrollTo(0, 0);
   }
 
   componentDidMount() {
@@ -285,7 +288,9 @@ class Contact extends Component {
                     ? 'i-sending'
                     : ''}`}
                 />
-                <span>{this.state.form.sending ? ' Sending' : 'Send'}</span>
+                <span>
+                  {this.state.form.sending ? ' Sending' : 'Send'}
+                </span>
               </button>
               <span
                 className={`sent-info ${this.state.form.sent ? '' : 'hidden'}`}

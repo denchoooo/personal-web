@@ -1,0 +1,55 @@
+a {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #303030;
+}
+
+a:hover {
+  color: #07d3bc;
+}
+
+.maintenance__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  color: #303030;
+  font-family: Raleway;
+}
+
+.maintenance__title {
+  font-family: PatuaOne-Regular;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.maintenance__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.maintenance__links__item {
+  margin-top: 20px;
+}
+
+.maintenance__icon_credit {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  color: #c0c0c0;
+}
+
+.maintenance__icon_credit a {
+  color: #c0c0c0;
+}
+
+.maintenance__icon {
+  width: 150px;
+  height: 150px;
+  padding-bottom: 20px;
+  position: relative;
+  left: 15px;
+}

@@ -4,6 +4,10 @@ import './Home.css';
 import logo from '../../resources/svgs/logo.svg';
 
 class Home extends Component {
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyNav);
   }

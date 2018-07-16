@@ -8,10 +8,11 @@ import worksSynchrome from '../../resources/images/works-synchrome.png';
 import worksPersonal from '../../resources/images/works-personal.jpg';
 
 import worksGithub from '../../resources/images/sp-github.jpg';
-import worksQuote from '../../resources/images/sp-quote.jpg';
-import worksWiki from '../../resources/images/sp-wiki.jpg';
-
 class Works extends Component {
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyNav);
   }
@@ -127,10 +128,10 @@ class Works extends Component {
                     <i className="mdi mdi-language-html5 works-icon" />
                   </div>
                   <div className="works-text">
-                    One of the project I've done with React fundamentals
-                    tutorial by Tyler McGinnis. One of the reasons why I can use
-                    React right now. This project is so useful, even I use this
-                    sometimes to check on popular repos.
+                    One of my oldest and first React project ever. This project
+                    fetch popular repositories using Github API, and list them
+                    in grid manner. You can even battle your Github level with
+                    your friends!
                   </div>
                 </div>
               </a>
